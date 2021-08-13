@@ -1,0 +1,32 @@
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"saveFiles","params":{"account":25,"files":[{"name":"testabc.txt","path":"/home/mma/abey-wallet/testfiles/test1"},{"name":"testabcde.txt","path":"/home/mma/abey-wallet/testfiles/test1"}],"fee":12},"id":123}' http://127.0.0.1:12261
+curl -X POST --data '{"jsonrpc":"2.0","method":"saveFiles","params":{"account":25,"files":[{"name":"testabc.txt","path":"\/home\/mma\/abey-wallet\/testfiles\/test1"},{"name":"testabcde.txt","path":"\/home\/mma\/abey-wallet\/testfiles\/test1"}],"fee":0.1000},"id":123}' http://127.0.0.1:12261
+
+
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"getFileNames","params":{"account":25,"ophash":"fer","content":"0200000097FF9C20100000001C0000008DAFF8AD1C000000320000000B000000746573746162632E747874030000006665720D0000007465737461626364652E74787403000000666572"},"id":123}' http://127.0.0.1:12261
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"getFiles","params":{"account":25,"ophash":"fer","whatToGet":"all","path":"/home/mma/abey-wallet/","content":"0200000097FF9C20100000001C0000008DAFF8AD1C000000320000000B000000746573746162632E747874030000006665720D0000007465737461626364652E74787403000000666572"},"id":123}' http://127.0.0.1:12261
+
+
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"getFiles","params":{"account":25,"ophash":"fer","whatToGet":"files","files":[{"name":"testabc.txt"},{"name":"testabcde.txt"}],"path":"/home/mma/abey-wallet/","content":"0200000097FF9C20100000001C0000008DAFF8AD1C000000320000000B000000746573746162632E747874030000006665720D0000007465737461626364652E74787403000000666572"},"id":123}' http://127.0.0.1:12261
+
+
+getAccountType
+curl -X POST --data '{"jsonrpc":"2.0","method":"getaccountoperations","params":{"account":7200},"id":123}' http://127.0.0.1:12261
+
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"getAccountType","params":{"account":25},"id":123}' http://127.0.0.1:12261
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"getblockoperations","params":{"block":395},"id":123}' http://127.0.0.1:12261
+
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"getaccount","params":{"account":6425},"id":123}' http://127.0.0.1:12261
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"getblockscount","params":{"account":25},"id":123}' http://127.0.0.1:12261
+
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"saveContract","params":{"account_signer":50,"account_target":26,"fee":100,"starting_block_number_flag":true,"starting_block_number":1,"active_blocks":100,"passive_blocks":100,"max_instruction_count":10000,"max_memory_usage_kb":1000,"max_runtime_seconds":1,"max_io_usage":128,"max_data_segment_size_kb":10,"export_table_size":252,"bytecode_size":668,"export_table_path":"/home/mma/abey-wallet/exportTable.bin","bytecode_path":"/home/mma/abey-wallet/bytecode.qvm","payload_method":"none"},"id":123}' http://127.0.0.1:12261
+
+curl -X POST --data '{"jsonrpc":"2.0","id":"100","method":"executeContract","params":{"callerAccount":100,"contractId":26, "fee":1, "functionName":"nextPrime","parameters":[{"type":"char","value":"0"},{"type":"int","value":"1"},{"type":"float","value":"0.1"},{"type":"double","value":"0.1"}]}}' http://127.0.0.1:12261

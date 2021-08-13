@@ -1,0 +1,3 @@
+D:/abey-wallet-observers/abey-wallet/cmake-build-debug/CMakeFiles/BlockchainObserver.dir
+D:/abey-wallet-observers/abey-wallet/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/abey-wallet-observers/abey-wallet/cmake-build-debug/CMakeFiles/rebuild_cache.dir

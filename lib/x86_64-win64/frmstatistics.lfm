@@ -1,0 +1,277 @@
+object StatisticsForm: TStatisticsForm
+  Left = 1556
+  Height = 287
+  Top = 259
+  Width = 313
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'Statistics'
+  ClientHeight = 287
+  ClientWidth = 313
+  FormStyle = fsStayOnTop
+  LCLVersion = '2.0.8.0'
+  object Shape2: TShape
+    Left = 0
+    Height = 251
+    Top = 36
+    Width = 313
+    Align = alClient
+    Brush.Color = clNone
+    Brush.Style = bsClear
+  end
+  object Label2: TLabel
+    Left = 12
+    Height = 15
+    Top = 175
+    Width = 75
+    Anchors = [akLeft, akBottom]
+    Caption = 'Block time (s):'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 5
+    Height = 15
+    Top = 91
+    Width = 63
+    Caption = 'Blockchain:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 13
+    Height = 15
+    Top = 123
+    Width = 37
+    Caption = 'Blocks:'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 13
+    Height = 15
+    Top = 107
+    Width = 53
+    Caption = 'Accounts:'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 13
+    Height = 15
+    Top = 139
+    Width = 75
+    Caption = 'Mining target:'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 173
+    Height = 15
+    Top = 91
+    Width = 64
+    Caption = 'Operations:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 181
+    Height = 15
+    Top = 107
+    Width = 47
+    Caption = 'Pending:'
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 4
+    Height = 15
+    Top = 158
+    Width = 76
+    Anchors = [akLeft, akBottom]
+    Caption = 'Performance:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 5
+    Height = 15
+    Top = 40
+    Width = 38
+    Caption = 'Status:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblStatus: TLabel
+    Left = 13
+    Height = 32
+    Top = 56
+    Width = 280
+    AutoSize = False
+    Caption = 'N/A'
+    Font.Color = 33023
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object Label12: TLabel
+    Left = 181
+    Height = 15
+    Top = 123
+    Width = 39
+    Caption = 'Clients:'
+    ParentColor = False
+  end
+  object Label13: TLabel
+    Left = 181
+    Height = 15
+    Top = 139
+    Width = 72
+    Caption = 'Blocks found:'
+    ParentColor = False
+  end
+  object lblAccounts: TLabel
+    Left = 77
+    Height = 15
+    Top = 107
+    Width = 88
+    AutoSize = False
+    Caption = 'N/A'
+    Font.Color = 4210752
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblBlocks: TLabel
+    Left = 77
+    Height = 15
+    Top = 123
+    Width = 88
+    AutoSize = False
+    Caption = 'N/A'
+    Font.Color = 4210752
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblMiningTarget: TLabel
+    Left = 93
+    Height = 15
+    Top = 139
+    Width = 80
+    AutoSize = False
+    Caption = 'N/A'
+    Font.Color = 4210752
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblPendingOperations: TLabel
+    Left = 237
+    Height = 15
+    Top = 107
+    Width = 64
+    AutoSize = False
+    Caption = 'N/A'
+    Font.Color = 4210752
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblMiners: TLabel
+    Left = 237
+    Height = 15
+    Top = 123
+    Width = 64
+    AutoSize = False
+    Caption = 'N/A'
+    Font.Color = 4210752
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblBlocksFound: TLabel
+    Left = 261
+    Height = 15
+    Top = 139
+    Width = 40
+    AutoSize = False
+    Caption = 'N/A'
+    Font.Color = 4210752
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblBlockTime: TLabel
+    Left = 133
+    Height = 15
+    Top = 175
+    Width = 168
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'N/A'
+    Font.Color = 4210752
+    Font.Height = -11
+    ParentColor = False
+    ParentFont = False
+  end
+  object Shape1: TShape
+    Left = 0
+    Height = 32
+    Top = 0
+    Width = 313
+    Align = alTop
+    Brush.Color = clBlack
+  end
+  object Label11: TLabel
+    Left = 8
+    Height = 15
+    Top = 8
+    Width = 50
+    Caption = 'Statistics'
+    Font.Color = clWhite
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Shape5: TShape
+    Left = 0
+    Height = 4
+    Top = 32
+    Width = 313
+    Align = alTop
+    Brush.Color = 43263
+  end
+  object BlockTimeChart: TChart
+    Left = 3
+    Height = 95
+    Top = 188
+    Width = 304
+    AxisList = <    
+      item
+        Grid.Color = clMedGray
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Range.Max = 2
+        Range.Min = -2
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Grid.Color = clMedGray
+        Grid.Visible = False
+        Visible = False
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    BackColor = clDefault
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    DoubleBuffered = True
+    object BlockLineSeries: TLineSeries
+      AxisIndexX = 1
+      LinePen.Color = 4227327
+      LinePen.Width = 2
+    end
+  end
+end

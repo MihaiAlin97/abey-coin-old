@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1535575190"/>
+  <Params Value=" -MObjFPC -Scghi -Cg -O2 -l -vewnhibq -Fi/home/mma/abey-wallet/lib/x86_64-linux -Fu/home/mma/abey-wallet/core -Fu/home/mma/abey-wallet/libraries/synapse -Fu/home/mma/abey-wallet/libraries/pascalcoin -Fu/home/mma/abey-wallet/libraries/generics.collections -Fu/home/mma/abey-wallet/libraries/sphere10 -Fu/home/mma/abey-wallet/libraries/hashlib4pascal -Fu/home/mma/abey-wallet/libraries/paszlib -Fu/home/mma/abey-wallet/libraries/cryptolib4pascal -Fu/home/mma/abey-wallet/libraries/simplebaselib4pascal -Fu/home/mma/abey-wallet/libraries/StrHashMap/StrHashMap -Fu/usr/lib/lazarus/1.8.2/components/lazutils/lib/x86_64-linux -Fu/home/mma/.lazarus/onlinepackagemanager/packages/dcpcrypt-2.0.4.1/lib/x86_64-linux -Fu/usr/lib/lazarus/1.8.2/packager/units/x86_64-linux -Fu/home/mma/abey-wallet/ -FU/home/mma/abey-wallet/lib/x86_64-linux/ -oABEY_Daemon abey_daemon.pp"/>
+</CONFIG>

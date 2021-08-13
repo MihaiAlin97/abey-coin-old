@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="BlockchainObserver" targetName="BlockchainObserver" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c8e678d9-9e3d-496f-a8cf-fd53b2c772e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPCObservable/ObservableServer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/FPCObservable/ObservableServer.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPCObservable/ObservableServer.lpr" beforeDir="false" afterPath="$PROJECT_DIR$/FPCObservable/ObservableServer.lpr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPCObservable/ObservableServer.lps" beforeDir="false" afterPath="$PROJECT_DIR$/FPCObservable/ObservableServer.lps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPCObservable/UPublisher.pas" beforeDir="false" afterPath="$PROJECT_DIR$/FPCObservable/UPublisher.pas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPCObservable/backup/ObservableServer.lpr" beforeDir="false" afterPath="$PROJECT_DIR$/FPCObservable/backup/ObservableServer.lpr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPCObservable/backup/ObservableServer.lps" beforeDir="false" afterPath="$PROJECT_DIR$/FPCObservable/backup/ObservableServer.lps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPCObservable/backup/UPublisher.pas" beforeDir="false" afterPath="$PROJECT_DIR$/FPCObservable/backup/UPublisher.pas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPCObservable/lib/x86_64-win64/ObservableServer.compiled" beforeDir="false" afterPath="$PROJECT_DIR$/FPCObservable/lib/x86_64-win64/ObservableServer.compiled" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPCObservable/lib/x86_64-win64/ObservableServer.o" beforeDir="false" afterPath="$PROJECT_DIR$/FPCObservable/lib/x86_64-win64/ObservableServer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPCObservable/lib/x86_64-win64/UPublisher.o" beforeDir="false" afterPath="$PROJECT_DIR$/FPCObservable/lib/x86_64-win64/UPublisher.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPCObservable/lib/x86_64-win64/UPublisher.ppu" beforeDir="false" afterPath="$PROJECT_DIR$/FPCObservable/lib/x86_64-win64/UPublisher.ppu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FPCObservable/ujsoncommunication.pas" beforeDir="false" afterPath="$PROJECT_DIR$/FPCObservable/ujsoncommunication.pas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abey-wallet/ABEY_Wallet.exe" beforeDir="false" afterPath="$PROJECT_DIR$/abey-wallet/ABEY_Wallet.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abey-wallet/ABEY_Wallet.lps" beforeDir="false" afterPath="$PROJECT_DIR$/abey-wallet/ABEY_Wallet.lps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abey-wallet/ABEY_daemon.lps" beforeDir="false" afterPath="$PROJECT_DIR$/abey-wallet/ABEY_daemon.lps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abey-wallet/ABEY_miner.log" beforeDir="false" afterPath="$PROJECT_DIR$/abey-wallet/ABEY_miner.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abey-wallet/backup/ABEY_Wallet.lps" beforeDir="false" afterPath="$PROJECT_DIR$/abey-wallet/backup/ABEY_Wallet.lps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abey-wallet/backup/ABEY_daemon.lps" beforeDir="false" afterPath="$PROJECT_DIR$/abey-wallet/backup/ABEY_daemon.lps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abey-wallet/core/UBlockChain.pas" beforeDir="false" afterPath="$PROJECT_DIR$/abey-wallet/core/UBlockChain.pas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abey-wallet/core/backup/UBlockChain.pas.bak" beforeDir="false" afterPath="$PROJECT_DIR$/abey-wallet/core/backup/UBlockChain.pas.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abey-wallet/core/backup/uvirtualmachine.pas.bak" beforeDir="false" afterPath="$PROJECT_DIR$/abey-wallet/core/backup/uvirtualmachine.pas.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abey-wallet/core/uvirtualmachine.pas" beforeDir="false" afterPath="$PROJECT_DIR$/abey-wallet/core/uvirtualmachine.pas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abey-wallet/lib/x86_64-win64/ABEY_Wallet.obj" beforeDir="false" afterPath="$PROJECT_DIR$/abey-wallet/lib/x86_64-win64/ABEY_Wallet.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abey-wallet/lib/x86_64-win64/uvirtualmachine.o" beforeDir="false" afterPath="$PROJECT_DIR$/abey-wallet/lib/x86_64-win64/uvirtualmachine.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abey-wallet/lib/x86_64-win64/uvirtualmachine.ppu" beforeDir="false" afterPath="$PROJECT_DIR$/abey-wallet/lib/x86_64-win64/uvirtualmachine.ppu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockchainSock.c" beforeDir="false" afterPath="$PROJECT_DIR$/blockchainSock.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockchainSock.h" beforeDir="false" afterPath="$PROJECT_DIR$/blockchainSock.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/BlockchainObserver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BlockchainObserver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BlockchainObserver.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BlockchainObserver.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BlockchainObserver.dir/blockchainSock.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BlockchainObserver.dir/blockchainSock.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BlockchainObserver.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BlockchainObserver.dir/main.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BlockchainObserver.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BlockchainObserver.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events.c" beforeDir="false" afterPath="$PROJECT_DIR$/events.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsonOut.h" beforeDir="false" afterPath="$PROJECT_DIR$/jsonOut.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1oCzReMRZaOKzaxFVgKs9MfAc4c" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\abey-wallet-observers\abey-wallet" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BlockchainObserver" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BlockchainObserver" TARGET_NAME="BlockchainObserver" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BlockchainObserver" RUN_TARGET_NAME="BlockchainObserver">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8e678d9-9e3d-496f-a8cf-fd53b2c772e7" name="Default Changelist" comment="" />
+      <created>1612805353803</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612805353803</updated>
+      <workItem from="1612805355632" duration="24283000" />
+      <workItem from="1613134943348" duration="44000" />
+      <workItem from="1613382538543" duration="5872000" />
+      <workItem from="1613505242290" duration="320000" />
+      <workItem from="1613512842570" duration="7966000" />
+      <workItem from="1613995573799" duration="36000" />
+      <workItem from="1617270893028" duration="1203000" />
+      <workItem from="1617793893270" duration="2090000" />
+      <workItem from="1618223238763" duration="597000" />
+      <workItem from="1620965391192" duration="3303000" />
+      <workItem from="1621138477433" duration="1613000" />
+      <workItem from="1621144999664" duration="32361000" />
+      <workItem from="1621439009373" duration="78506000" />
+      <workItem from="1622626103898" duration="2824000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="586" y="238" key="#Inspections" timestamp="1621449724036">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="238" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1621449724036" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612986460330">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612986460330" />
+    <state x="669" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621825583881">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="669" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1621825583881" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1613995607308">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613134980960" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1613995607308" />
+    <state width="1877" height="334" key="GridCell.Tab.0.bottom" timestamp="1613650654874">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="473" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613129237362" />
+    <state width="1877" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613650654874" />
+    <state width="1877" height="334" key="GridCell.Tab.0.center" timestamp="1613650654874">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="473" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613129237362" />
+    <state width="1877" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613650654874" />
+    <state width="1877" height="334" key="GridCell.Tab.0.left" timestamp="1613650654874">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="473" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613129237362" />
+    <state width="1877" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613650654874" />
+    <state width="1877" height="334" key="GridCell.Tab.0.right" timestamp="1613650654874">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="473" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613129237362" />
+    <state width="1877" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613650654874" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1612988878094">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612988878094" />
+    <state x="1026" y="275" key="run.anything.popup" timestamp="1622595432310">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1026" y="275" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1622595432310" />
+    <state x="623" y="225" key="search.everywhere.popup" timestamp="1621825555113">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1621825555113" />
+  </component>
+</project>

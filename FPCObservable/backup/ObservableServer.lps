@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="33">
+      <Unit0>
+        <Filename Value="ObservableServer.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="176" Y="21"/>
+        <UsageCount Value="256"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="synapse\blcksock.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="18"/>
+        <TopLine Value="966"/>
+        <CursorPos X="58" Y="963"/>
+        <UsageCount Value="256"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="ulistener.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UListener"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="23" Y="46"/>
+        <UsageCount Value="228"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="ujsoncommunication.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UJsonCommunication"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="79"/>
+        <CursorPos X="47" Y="18"/>
+        <UsageCount Value="378"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="MockClient.lpr"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="18" Y="6"/>
+        <UsageCount Value="68"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="UPublisher.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="625"/>
+        <CursorPos X="76" Y="668"/>
+        <UsageCount Value="109"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\Users\Admin\Downloads\pubsubchimera\chimera.pubsub.producer.pas"/>
+        <EditorIndex Value="29"/>
+        <TopLine Value="49"/>
+        <CursorPos X="21" Y="76"/>
+        <UsageCount Value="109"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="C:\Users\Admin\Downloads\pubsubchimera\chimera.pubsub.pas"/>
+        <EditorIndex Value="30"/>
+        <TopLine Value="32"/>
+        <CursorPos X="18" Y="59"/>
+        <UsageCount Value="109"/>
+        <Loaded Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="D:\abey-wallet-contracts\abey-wallet\core\UThread.pas"/>
+        <EditorIndex Value="25"/>
+        <CursorPos X="63" Y="20"/>
+        <UsageCount Value="109"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="D:\abey-wallet-contracts\abey-wallet\core\UTCPIP.pas"/>
+        <EditorIndex Value="28"/>
+        <TopLine Value="947"/>
+        <UsageCount Value="109"/>
+        <Loaded Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="16"/>
+        <TopLine Value="215"/>
+        <CursorPos X="17" Y="242"/>
+        <UsageCount Value="109"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\Users\Admin\Downloads\ibx\fbintf\client\FBEvents.pas"/>
+        <EditorIndex Value="26"/>
+        <TopLine Value="191"/>
+        <CursorPos X="10" Y="219"/>
+        <UsageCount Value="109"/>
+        <Loaded Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\Users\Admin\Downloads\ibx\fbintf\client\FBActivityMonitor.pas"/>
+        <EditorIndex Value="27"/>
+        <TopLine Value="59"/>
+        <CursorPos X="43" Y="86"/>
+        <UsageCount Value="109"/>
+        <Loaded Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\rtl\objpas\classes\lists.inc"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="107"/>
+        <CursorPos X="3" Y="124"/>
+        <UsageCount Value="105"/>
+        <Loaded Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="D:\abey-wallet-contracts\abey-wallet\core\UAccounts.pas"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="19"/>
+        <CursorPos X="57" Y="56"/>
+        <UsageCount Value="103"/>
+        <Loaded Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="D:\abey-wallet-contracts\abey-wallet\core\UConst.pas"/>
+        <EditorIndex Value="14"/>
+        <CursorPos X="32" Y="38"/>
+        <UsageCount Value="103"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="D:\abey-wallet-contracts\abey-wallet\core\UPCCryptoLib4Pascal.pas"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="310"/>
+        <CursorPos X="34" Y="341"/>
+        <UsageCount Value="103"/>
+        <Loaded Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\rtl\win\sysosh.inc"/>
+        <EditorIndex Value="23"/>
+        <CursorPos X="3" Y="33"/>
+        <UsageCount Value="100"/>
+        <Loaded Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\packages\fcl-async\src\fpasync.pp"/>
+        <UnitName Value="fpAsync"/>
+        <EditorIndex Value="24"/>
+        <TopLine Value="803"/>
+        <CursorPos X="57" Y="70"/>
+        <UsageCount Value="100"/>
+        <Loaded Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\packages\fcl-base\src\syncobjs.pp"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="99"/>
+        <CursorPos X="22" Y="141"/>
+        <UsageCount Value="100"/>
+        <Loaded Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\rtl\inc\threadh.inc"/>
+        <EditorIndex Value="20"/>
+        <TopLine Value="140"/>
+        <CursorPos X="11" Y="160"/>
+        <UsageCount Value="100"/>
+        <Loaded Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\rtl\objpas\classes\classes.inc"/>
+        <EditorIndex Value="22"/>
+        <TopLine Value="198"/>
+        <CursorPos X="14" Y="223"/>
+        <UsageCount Value="102"/>
+        <Loaded Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\rtl\objpas\classes\collect.inc"/>
+        <EditorIndex Value="21"/>
+        <TopLine Value="365"/>
+        <CursorPos X="33" Y="390"/>
+        <UsageCount Value="101"/>
+        <Loaded Value="True"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="synapse\sswin32.inc"/>
+        <EditorIndex Value="19"/>
+        <TopLine Value="1162"/>
+        <CursorPos X="21" Y="1173"/>
+        <UsageCount Value="101"/>
+        <Loaded Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\rtl\inc\objpash.inc"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="167"/>
+        <CursorPos X="23" Y="194"/>
+        <UsageCount Value="105"/>
+        <Loaded Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\packages\fcl-base\src\contnrs.pp"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="1051"/>
+        <CursorPos X="9" Y="1066"/>
+        <UsageCount Value="149"/>
+        <Loaded Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\rtl\win64\system.pp"/>
+        <UnitName Value="System"/>
+        <EditorIndex Value="10"/>
+        <UsageCount Value="123"/>
+        <Loaded Value="True"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\rtl\win\sysutils.pp"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="40"/>
+        <CursorPos X="22" Y="43"/>
+        <UsageCount Value="123"/>
+        <Loaded Value="True"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\rtl\win\tthread.inc"/>
+        <EditorIndex Value="17"/>
+        <CursorPos X="28" Y="3"/>
+        <UsageCount Value="109"/>
+        <Loaded Value="True"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="D:\abey-wallet\core\UThread.pas"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="16"/>
+        <CursorPos X="54" Y="37"/>
+        <UsageCount Value="106"/>
+        <Loaded Value="True"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\packages\fcl-json\src\fpjson.pp"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="1137"/>
+        <CursorPos X="8" Y="1164"/>
+        <UsageCount Value="142"/>
+        <Loaded Value="True"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\rtl\objpas\fgl.pp"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="1358"/>
+        <CursorPos X="74" Y="1371"/>
+        <UsageCount Value="117"/>
+        <Loaded Value="True"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="D:\abey-wallet\core\UOpTransaction.pas"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="57" Y="34"/>
+        <UsageCount Value="116"/>
+        <Loaded Value="True"/>
+      </Unit32>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="630" Column="45" TopLine="591"/>
+      </Position1>
+      <Position2>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="761" Column="13" TopLine="749"/>
+      </Position2>
+      <Position3>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="131" Column="18" TopLine="108"/>
+      </Position3>
+      <Position4>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="594" Column="15" TopLine="591"/>
+      </Position4>
+      <Position5>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="625" Column="17" TopLine="616"/>
+      </Position5>
+      <Position6>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="627" Column="45" TopLine="616"/>
+      </Position6>
+      <Position7>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="777" Column="64" TopLine="755"/>
+      </Position7>
+      <Position8>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="771" Column="5" TopLine="755"/>
+      </Position8>
+      <Position9>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="763" Column="49" TopLine="749"/>
+      </Position9>
+      <Position10>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="653" Column="24" TopLine="630"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ObservableServer.lpr"/>
+        <Caret Line="24" Column="35"/>
+      </Position11>
+      <Position12>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="619" Column="39" TopLine="600"/>
+      </Position12>
+      <Position13>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="12" Column="10"/>
+      </Position13>
+      <Position14>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="25" Column="62"/>
+      </Position14>
+      <Position15>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="42" Column="20" TopLine="3"/>
+      </Position15>
+      <Position16>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="43" Column="19" TopLine="4"/>
+      </Position16>
+      <Position17>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="84" Column="32" TopLine="46"/>
+      </Position17>
+      <Position18>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="627" Column="45" TopLine="598"/>
+      </Position18>
+      <Position19>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="780" Column="42" TopLine="750"/>
+      </Position19>
+      <Position20>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="599" Column="9" TopLine="576"/>
+      </Position20>
+      <Position21>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="609" Column="9" TopLine="576"/>
+      </Position21>
+      <Position22>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="610" Column="35" TopLine="576"/>
+      </Position22>
+      <Position23>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="652" Column="32" TopLine="621"/>
+      </Position23>
+      <Position24>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="657" Column="48" TopLine="641"/>
+      </Position24>
+      <Position25>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="647" Column="28" TopLine="639"/>
+      </Position25>
+      <Position26>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="790" Column="15" TopLine="777"/>
+      </Position26>
+      <Position27>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="627" Column="45" TopLine="605"/>
+      </Position27>
+      <Position28>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="802" Column="37" TopLine="764"/>
+      </Position28>
+      <Position29>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="627" Column="39" TopLine="605"/>
+      </Position29>
+      <Position30>
+        <Filename Value="UPublisher.pas"/>
+        <Caret Line="797" Column="90" TopLine="773"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

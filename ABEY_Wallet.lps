@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="78">
+      <Unit0>
+        <Filename Value="ABEY_Wallet.dpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="18"/>
+        <CursorPos X="88" Y="67"/>
+        <UsageCount Value="200"/>
+        <Bookmarks Count="1">
+          <Item0 Y="67" ID="1"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="core/UBlockChain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="1100"/>
+        <CursorPos X="55" Y="1131"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="core/UCrypto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="20"/>
+        <TopLine Value="611"/>
+        <CursorPos X="84" Y="639"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="core/UTime.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="core/UWallet.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="136"/>
+        <CursorPos X="61" Y="159"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="core/UOpTransaction.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="3551"/>
+        <CursorPos X="16" Y="291"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="core/UNetProtocol.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="26"/>
+        <TopLine Value="2110"/>
+        <CursorPos X="50" Y="2157"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="core/UAccounts.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="16"/>
+        <TopLine Value="430"/>
+        <CursorPos X="3" Y="457"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="core/UConst.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="208"/>
+        <CursorPos X="43" Y="219"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="core/UThread.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="45"/>
+        <TopLine Value="188"/>
+        <CursorPos X="45" Y="200"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="core/ULog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="46"/>
+        <TopLine Value="137"/>
+        <CursorPos X="56" Y="165"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="core/UNode.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="44"/>
+        <TopLine Value="264"/>
+        <CursorPos X="40" Y="275"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="core/UECIES.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="gui-classic/UFRMWallet.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRMWallet"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="2786"/>
+        <CursorPos X="31" Y="2800"/>
+        <UsageCount Value="200"/>
+        <Bookmarks Count="8">
+          <Item0 X="25" Y="37" ID="8"/>
+          <Item1 Y="2529" ID="4"/>
+          <Item2 Y="1023" ID="3"/>
+          <Item3 X="3" Y="2812" ID="9"/>
+          <Item4 X="3" Y="1305" ID="2"/>
+          <Item5 X="19" Y="1426" ID="5"/>
+          <Item6 X="33" Y="1458" ID="6"/>
+          <Item7 X="3" Y="3019" ID="7"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="gui-classic/UFRMABEYWalletConfig.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRMABEYWalletConfig"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="43"/>
+        <TopLine Value="124"/>
+        <CursorPos X="80" Y="166"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="gui-classic/UFRMAbout.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRMAbout"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="36"/>
+        <CursorPos X="32" Y="83"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="gui-classic/UFRMOperation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRMOperation"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="32"/>
+        <TopLine Value="304"/>
+        <CursorPos Y="304"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="gui-classic/UFRMWalletKeys.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRMWalletKeys"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="47"/>
+        <CursorPos X="143" Y="14"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="gui-classic/UFRMNewPrivateKeyType.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRMNewPrivateKeyType"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="54"/>
+        <TopLine Value="57"/>
+        <CursorPos X="37" Y="75"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="gui-classic/UFRMPayloadDecoder.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRMPayloadDecoder"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="56"/>
+        <CursorPos X="33" Y="15"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="gui-classic/UFRMNodesIp.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRMNodesIp"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="42"/>
+        <TopLine Value="93"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="core/UTCPIP.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="core/URPC.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="33"/>
+        <TopLine Value="4041"/>
+        <CursorPos X="35" Y="4169"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="core/UPoolMining.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="40"/>
+        <TopLine Value="1237"/>
+        <CursorPos X="88" Y="1277"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="core/UOpenSSL.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="22"/>
+        <TopLine Value="576"/>
+        <CursorPos X="33" Y="604"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="core/UFileStorage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="37"/>
+        <CursorPos X="48" Y="37"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="core/UAES.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="core/UChunk.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="27"/>
+        <TopLine Value="82"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="gui-classic/UFRMAccountSelect.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRMAccountSelect"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="52"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="core/UBaseTypes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="24"/>
+        <TopLine Value="325"/>
+        <CursorPos X="22" Y="147"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="config.inc"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="core/UTxMultiOperation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="gui-classic/frmstatistics.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="StatisticsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmStatistics"/>
+        <EditorIndex Value="51"/>
+        <TopLine Value="31"/>
+        <CursorPos X="42" Y="56"/>
+        <UsageCount Value="373"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="gui-classic/frmnotifications.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="NotificationsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmNotifications"/>
+        <EditorIndex Value="50"/>
+        <TopLine Value="41"/>
+        <CursorPos X="20" Y="64"/>
+        <UsageCount Value="361"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="libraries/StrHashMap/StrHashMap/StrHashMap.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="238"/>
+        <CursorPos Y="261"/>
+        <UsageCount Value="245"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="../../abey-wallet-observers/abey-wallet/FPCObservable/UPublisher.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="533"/>
+        <CursorPos X="5" Y="546"/>
+        <UsageCount Value="211"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="gui-classic/UGridUtils.pas"/>
+        <EditorIndex Value="38"/>
+        <TopLine Value="558"/>
+        <CursorPos X="79" Y="587"/>
+        <UsageCount Value="163"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="gui-classic/UFRMMemoText.pas"/>
+        <ComponentName Value="FRMMemoText"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="53"/>
+        <UsageCount Value="136"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="gui-classic/UFRMOperationsExplorer.pas"/>
+        <ComponentName Value="FRMOperationsExplorer"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="55"/>
+        <TopLine Value="566"/>
+        <CursorPos X="3" Y="571"/>
+        <UsageCount Value="136"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="gui-classic/UFRMRandomOperations.pas"/>
+        <ComponentName Value="FRMRandomOperations"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="57"/>
+        <UsageCount Value="136"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="gui-classic/UFRMRPCCalls.pas"/>
+        <ComponentName Value="FRMRPCCalls"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="58"/>
+        <UsageCount Value="136"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="gui-classic/UGUIUtils.pas"/>
+        <EditorIndex Value="49"/>
+        <CursorPos X="53"/>
+        <UsageCount Value="136"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="libraries/sphere10/UCommon.pas"/>
+        <EditorIndex Value="41"/>
+        <TopLine Value="1752"/>
+        <CursorPos X="22" Y="1675"/>
+        <UsageCount Value="109"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="core/upcdaemon.pas"/>
+        <EditorIndex Value="19"/>
+        <TopLine Value="194"/>
+        <CursorPos X="34" Y="207"/>
+        <UsageCount Value="149"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="core/UPCOrderedLists.pas"/>
+        <EditorIndex Value="48"/>
+        <TopLine Value="29"/>
+        <CursorPos X="3" Y="36"/>
+        <UsageCount Value="121"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="core/UUpdateVersionThread.pas"/>
+        <EditorIndex Value="31"/>
+        <TopLine Value="87"/>
+        <CursorPos X="22" Y="110"/>
+        <UsageCount Value="114"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="core/USettings.pas"/>
+        <EditorIndex Value="25"/>
+        <TopLine Value="19"/>
+        <CursorPos X="34" Y="40"/>
+        <UsageCount Value="112"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="core/UAccountKeyStorage.pas"/>
+        <EditorIndex Value="30"/>
+        <TopLine Value="2"/>
+        <CursorPos X="20" Y="26"/>
+        <UsageCount Value="109"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="gui-classic/animatedgif.pas"/>
+        <UnitName Value="AnimatedGif"/>
+        <EditorIndex Value="29"/>
+        <CursorPos X="61" Y="21"/>
+        <UsageCount Value="107"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="../abey-wallet-zero/abey-wallet/core/UBlockChain.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3305"/>
+        <CursorPos X="49" Y="3326"/>
+        <UsageCount Value="48"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="../abey-wallet-zero/abey-wallet/core/UConst.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="95"/>
+        <CursorPos X="16" Y="119"/>
+        <UsageCount Value="48"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="../abey-wallet-zero/abey-wallet/core/UAccounts.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1023"/>
+        <CursorPos X="23" Y="1043"/>
+        <UsageCount Value="48"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="libraries/pascalcoin/UAppParams.pas"/>
+        <EditorIndex Value="28"/>
+        <TopLine Value="26"/>
+        <CursorPos X="53" Y="8"/>
+        <UsageCount Value="105"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="../abey-wallet-zero/abey-wallet/libraries/pascalcoin/UAppParams.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="106"/>
+        <CursorPos X="35" Y="125"/>
+        <UsageCount Value="48"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="../bitMappedNodes/project1.lpr"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="181"/>
+        <CursorPos X="7" Y="196"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="core/binarysearch.pas"/>
+        <UnitName Value="BinarySearch"/>
+        <EditorIndex Value="36"/>
+        <TopLine Value="740"/>
+        <CursorPos X="68" Y="744"/>
+        <UsageCount Value="103"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="../SaveContract/abey-wallet/core/UBlockChain.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="52"/>
+        <CursorPos X="12" Y="93"/>
+        <UsageCount Value="43"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="core/dbstorage.pas"/>
+        <UnitName Value="DBStorage"/>
+        <EditorIndex Value="37"/>
+        <TopLine Value="6"/>
+        <CursorPos X="17" Y="48"/>
+        <UsageCount Value="122"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="../lazarus/fpc/3.0.4/source/rtl/objpas/sysutils/sysutilh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="80"/>
+        <CursorPos X="4" Y="104"/>
+        <UsageCount Value="48"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="libraries/pascalcoin/UJSONFunctions.pas"/>
+        <EditorIndex Value="39"/>
+        <TopLine Value="152"/>
+        <CursorPos X="40" Y="175"/>
+        <UsageCount Value="105"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="../abey-wallet-zero/abey-wallet/core/URPC.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2689"/>
+        <CursorPos X="21" Y="2712"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="../lazarus/components/lazutils/avglvltree.pas"/>
+        <UnitName Value="AvgLvlTree"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="45"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="771"/>
+        <CursorPos X="29" Y="815"/>
+        <UsageCount Value="133"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="core/uvirtualmachine.pas"/>
+        <UnitName Value="UVirtualMachine"/>
+        <EditorIndex Value="34"/>
+        <TopLine Value="568"/>
+        <CursorPos Y="591"/>
+        <UsageCount Value="113"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="libraries/pascalcoin/UFolderHelper.pas"/>
+        <EditorIndex Value="35"/>
+        <TopLine Value="52"/>
+        <CursorPos X="41" Y="56"/>
+        <UsageCount Value="115"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="../../lazarus/components/tachart/tadatatools.pas"/>
+        <UnitName Value="TADataTools"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="102"/>
+        <CursorPos X="3" Y="126"/>
+        <UsageCount Value="134"/>
+        <Loaded Value="True"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="gui-classic/UFRMOperationsExplorer.lfm"/>
+        <EditorIndex Value="18"/>
+        <UsageCount Value="134"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="core/UPCDataTypes.pas"/>
+        <EditorIndex Value="23"/>
+        <CursorPos X="44" Y="39"/>
+        <UsageCount Value="103"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="core/UPCOpenSSLSignature.pas"/>
+        <EditorIndex Value="21"/>
+        <TopLine Value="28"/>
+        <CursorPos X="38" Y="47"/>
+        <UsageCount Value="103"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="../../lazarus/fpc/3.0.4/source/rtl/objpas/classes/classesh.inc"/>
+        <EditorIndex Value="17"/>
+        <TopLine Value="1656"/>
+        <CursorPos X="16" Y="1669"/>
+        <UsageCount Value="105"/>
+        <Loaded Value="True"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="core/UPublisher.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="721"/>
+        <CursorPos X="23" Y="762"/>
+        <UsageCount Value="117"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="core/ujsoncommunication.pas"/>
+        <UnitName Value="UJsonCommunication"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="191"/>
+        <CursorPos X="25" Y="211"/>
+        <UsageCount Value="117"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="../../lazarus/fpc/3.0.4/source/packages/fcl-base/src/syncobjs.pp"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="116"/>
+        <CursorPos X="3" Y="128"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="../../lazarus/fpc/3.0.4/source/packages/rtl-extra/src/inc/socketsh.inc"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="128"/>
+        <CursorPos X="21" Y="154"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="../../lazarus/fpc/3.0.4/source/packages/rtl-extra/src/win/sockets.pp"/>
+        <UnitName Value="Sockets"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="60"/>
+        <CursorPos X="25" Y="74"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="../../lazarus/fpc/3.0.4/source/packages/rtl-extra/src/win/winsock2.pp"/>
+        <UnitName Value="WinSock2"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="1209"/>
+        <CursorPos X="88" Y="1236"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="libraries/synapse/sswin32.inc"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="287"/>
+        <CursorPos X="20" Y="313"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit76>
+      <Unit77>
+        <Filename Value="../../lazarus/fpc/3.0.4/source/rtl/inc/systemh.inc"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="312"/>
+        <CursorPos X="18" Y="339"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit77>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="core/UPublisher.pas"/>
+        <Caret Line="756" Column="61" TopLine="723"/>
+      </Position1>
+      <Position2>
+        <Filename Value="core/UPublisher.pas"/>
+        <Caret Line="758" Column="85" TopLine="721"/>
+      </Position2>
+      <Position3>
+        <Filename Value="core/UPublisher.pas"/>
+        <Caret Line="754" Column="18" TopLine="730"/>
+      </Position3>
+      <Position4>
+        <Filename Value="core/UPublisher.pas"/>
+        <Caret Line="757" Column="85" TopLine="730"/>
+      </Position4>
+      <Position5>
+        <Filename Value="../../lazarus/fpc/3.0.4/source/packages/rtl-extra/src/inc/socketsh.inc"/>
+        <Caret Line="154" Column="21" TopLine="128"/>
+      </Position5>
+      <Position6>
+        <Filename Value="../../lazarus/fpc/3.0.4/source/packages/rtl-extra/src/win/sockets.pp"/>
+        <Caret Line="74" Column="25" TopLine="60"/>
+      </Position6>
+      <Position7>
+        <Filename Value="core/UPublisher.pas"/>
+        <Caret Line="756" Column="30" TopLine="730"/>
+      </Position7>
+      <Position8>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="969" Column="16" TopLine="942"/>
+      </Position8>
+      <Position9>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="222" Column="55" TopLine="195"/>
+      </Position9>
+      <Position10>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="322" Column="17" TopLine="276"/>
+      </Position10>
+      <Position11>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="324" Column="17" TopLine="278"/>
+      </Position11>
+      <Position12>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="328" Column="15" TopLine="284"/>
+      </Position12>
+      <Position13>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="874" Column="20" TopLine="921"/>
+      </Position13>
+      <Position14>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="418" Column="42" TopLine="393"/>
+      </Position14>
+      <Position15>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="724" Column="20" TopLine="680"/>
+      </Position15>
+      <Position16>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="986" Column="42" TopLine="940"/>
+      </Position16>
+      <Position17>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="3230" Column="39" TopLine="3185"/>
+      </Position17>
+      <Position18>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="418" Column="42" TopLine="393"/>
+      </Position18>
+      <Position19>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="221" Column="10" TopLine="194"/>
+      </Position19>
+      <Position20>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="303" Column="21" TopLine="257"/>
+      </Position20>
+      <Position21>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="304" Column="25" TopLine="258"/>
+      </Position21>
+      <Position22>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="329" Column="39" TopLine="285"/>
+      </Position22>
+      <Position23>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="330" Column="39" TopLine="286"/>
+      </Position23>
+      <Position24>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="332" Column="35" TopLine="288"/>
+      </Position24>
+      <Position25>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="334" Column="21" TopLine="289"/>
+      </Position25>
+      <Position26>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="381" Column="26" TopLine="336"/>
+      </Position26>
+      <Position27>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="420" Column="29" TopLine="376"/>
+      </Position27>
+      <Position28>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="706" Column="23" TopLine="662"/>
+      </Position28>
+      <Position29>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="709" Column="23" TopLine="665"/>
+      </Position29>
+      <Position30>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="727" Column="58" TopLine="683"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

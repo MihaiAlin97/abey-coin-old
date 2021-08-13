@@ -1,0 +1,5 @@
+# Ignore everything samples this directory
+*
+# Except this file
+!.gitignore
+!g_syscalls.asm

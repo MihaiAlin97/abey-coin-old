@@ -1,0 +1,391 @@
+object NotificationsForm: TNotificationsForm
+  Left = 1578
+  Height = 302
+  Top = 444
+  Width = 313
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'Notifications'
+  ClientHeight = 302
+  ClientWidth = 313
+  FormStyle = fsStayOnTop
+  LCLVersion = '2.0.8.0'
+  object Shape4: TShape
+    Left = 0
+    Height = 166
+    Top = 136
+    Width = 313
+    Align = alClient
+    Brush.Color = clNone
+    Brush.Style = bsClear
+  end
+  object Shape2: TShape
+    Left = 0
+    Height = 64
+    Top = 36
+    Width = 313
+    Align = alTop
+    Brush.Color = clNone
+    Brush.Style = bsClear
+  end
+  object lblMessages: TLabel
+    Left = 8
+    Height = 32
+    Top = 56
+    Width = 296
+    AutoSize = False
+    Caption = 'You have no new messages.'
+    Font.Color = 33023
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object Label10: TLabel
+    Left = 8
+    Height = 15
+    Top = 40
+    Width = 56
+    Caption = 'Messages:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Shape1: TShape
+    Left = 0
+    Height = 32
+    Top = 0
+    Width = 313
+    Align = alTop
+    Brush.Color = clBlack
+  end
+  object Label11: TLabel
+    Left = 8
+    Height = 15
+    Top = 8
+    Width = 71
+    Caption = 'Notifications'
+    Font.Color = clWhite
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Shape3: TShape
+    Left = 0
+    Height = 32
+    Top = 100
+    Width = 313
+    Align = alTop
+    Brush.Color = clBlack
+  end
+  object Label12: TLabel
+    Left = 8
+    Height = 15
+    Top = 110
+    Width = 50
+    Caption = 'Network'
+    Font.Color = clWhite
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 15
+    Top = 139
+    Width = 71
+    Caption = 'Connections:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 16
+    Height = 15
+    Top = 155
+    Width = 39
+    Caption = 'Clients:'
+    ParentColor = False
+  end
+  object lblClients: TLabel
+    Left = 80
+    Height = 15
+    Top = 155
+    Width = 88
+    AutoSize = False
+    Caption = 'N/A'
+    Font.Color = 4210752
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 16
+    Height = 15
+    Top = 171
+    Width = 40
+    Caption = 'Servers:'
+    ParentColor = False
+  end
+  object lblServers: TLabel
+    Left = 80
+    Height = 15
+    Top = 171
+    Width = 88
+    AutoSize = False
+    Caption = 'N/A'
+    Font.Color = 4210752
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblSent: TLabel
+    Left = 216
+    Height = 15
+    Top = 171
+    Width = 88
+    AutoSize = False
+    Caption = 'N/A'
+    Font.Color = 9943551
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblReceived: TLabel
+    Left = 216
+    Height = 15
+    Top = 155
+    Width = 88
+    AutoSize = False
+    Caption = 'N/A'
+    Font.Color = 4227327
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 152
+    Height = 15
+    Top = 155
+    Width = 50
+    Caption = 'Received:'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 152
+    Height = 15
+    Top = 171
+    Width = 26
+    Caption = 'Sent:'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 144
+    Height = 15
+    Top = 139
+    Width = 92
+    Caption = 'Total bandwidth:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object NetworkChart: TChart
+    Left = 2
+    Height = 95
+    Top = 206
+    Width = 304
+    AntialiasingMode = amOn
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Range.Max = 50
+        Range.Min = -50
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Visible = False
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Range.Max = 30
+        Range.UseMax = True
+        Range.UseMin = True
+        Title.LabelBrush.Style = bsClear
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Anchors = [akLeft, akBottom]
+    ParentShowHint = False
+    object SentLineSeries1: TLineSeries
+      AxisIndexX = 1
+      LinePen.Color = 9943551
+      LinePen.Width = 2
+    end
+    object ReceivedLineSeries1: TLineSeries
+      AxisIndexX = 1
+      LinePen.Color = 4227327
+      LinePen.Width = 2
+    end
+  end
+  object imgNetworkOn: TImage
+    Left = 283
+    Height = 24
+    Top = 105
+    Width = 24
+    AutoSize = True
+    OnClick = imgNetworkOnClick
+    Picture.Data = {
+      1754506F727461626C654E6574776F726B47726170686963AB03000089504E47
+      0D0A1A0A0000000D4948445200000018000000180806000000E0773DF8000000
+      0774494D4507E4041D020F0A723BFB09000000097048597300002E2300002E23
+      0178A53F760000000467414D410000B18F0BFC61050000033A4944415478DA95
+      564B4F934114BD263621A224BA40A50F5AC4A542C44D8DBAD6281BE2DE1FA01B
+      C5C4854663C002E555A9C0D70242796A02D2C45788BA50771A7E86FFC1B870BC
+      A77306261F2DD6C549BFDC9939F7CEB98FA9C8645CAA2250141322A3D11372FB
+      D87DB910D91691DF15E01B36AC614F508303A8499E6D69979B4D93D271F0A79C
+      8BFC912B878CF41CB1C07797DAB0863DD81BD4E3608ABFB78E3E90D8815F72ED
+      B0913BCD461EB718E98B1A794AF447AD0D6BD7750FF6E28CCFB1C70116F2B188
+      F4346ECA998891BBCD967450311C3332A6C811F81E89D93538EBD5BD67F50CCE
+      8263AAD60DB0E162839187278D64A29664226EF480912061A4E0615A6D79C528
+      1D3DD233971AAC933D3708280B2207F9801E188F59E2A292CD28664380AD4847
+      B8D5109DE026E07239D9492874842C19924F931C642F140B8A52ABC542ABB539
+      47B8DD33DE047281CB25BE5266A80424B48FB2B8C8E712966C49B1A258255668
+      C3DA9C7312B7B9411120F1E00477A596516EA8084430E1450E8265C5CBA49175
+      C56B2065BF615BF69CE0CC733D9B8DDA02E9544E70571A06758EB21B66F43394
+      6589E4207EA3C41F88B78A4DC5ABA4DD33EFDD02497FD262FB04DC95AE44E340
+      1E5C3170D127AC14EB24FFD866E4CB298B4FFAFD4E6D1B492B19F232CBEACA51
+      A6AB8D46D295EED7D64777C288C5021D94A837A247D420FEDE6EE487E2AB7E6F
+      B5D95BACE9FAA22713244615DE68321C2DFF7290DA7500F2EDD346BED1413965
+      25DCD7419A12F553A2829760271134872C881CE49FF5FB7DCADEAE9A44195F22
+      24A28B491E61FD87930C29A039A2DE227999495E0E25798C493EEF921C2ED37C
+      953205D1061D9519396C2B8CDEC93389328DD966DB2953D768680EC834EADDC2
+      6F3448B1C6FA5FA5E3123BDA75F338E5E9F61BCD1F15BDBC458EE5EA9CCC33E9
+      8B4489B2B82E2E30B99847F78E8746853FEC30A830B0B011B325080DBB39C21F
+      7601C9B37C233AC2C32E3CAE3172E164905585F687A302098B8C1836683ECE49
+      0AF2CBB5C675F8C1C14D20177A23CBBCE4F8364CC4771F9D2C35872C1DF53C38
+      E1271389C7E042D9C1D9000152D8104477BD4F66AD471FE5863E41E3A03B017C
+      A3CE3BFFF7D1DFEF6F4BDAFBDB92AEFF6FCB5F806D11DED9A78A460000000049
+      454E44AE426082
+    }
+    Visible = False
+  end
+  object imgNetworkOff: TImage
+    Left = 283
+    Height = 24
+    Top = 105
+    Width = 24
+    AutoSize = True
+    OnClick = imgNetworkOnClick
+    Picture.Data = {
+      1754506F727461626C654E6574776F726B477261706869639404000089504E47
+      0D0A1A0A0000000D4948445200000018000000180806000000E0773DF8000000
+      0774494D4507E4041D020F126157635F000000097048597300002E2300002E23
+      0178A53F760000000467414D410000B18F0BFC6105000004234944415478DA95
+      96494F545110855F40141105271C230691468D51A362A389440D2D242A212D44
+      99168E31104D8CB11DE986D82B04E2C2DFE17FD0A82B77468D2E8803CEF3ACD1
+      3ED677DF6B6D041C16151EEFDD7BEADC53A7EAB6974824BC91A2BBBBDB4B9E39
+      E31D3B7162E6F6B6B698170E5FF37273BFBAB067DEF12D994CBAB5A3E18C0A7E
+      34162BDD1C8D9E2F0F85069BB2B2529D9EA7FE20E216BCE31B6B583B5A9221FF
+      747575B9BF0DADAD274305059F7B0CE8A2C5CDAC2C0D8C19A3BB39392E78BE65
+      EF2ED9B7B316AC654F26C6B0047C887776E6ACADA9B9B0CB36B179C0C01E8E1B
+      A767E3C7EB755E9EDE4E98E0E2B5C5737BF7C8BE91F0B2ADDD6D51697BC1C84C
+      32241BE0476DE17563F760EC58BD30D08F1327EA5B61A1346D9A5454E4873D7F
+      9F3C599FECDB4B5B03891BD9D98A0549869D00FD38E2AE007CD036BC31960E78
+      C60CA9B8582A2D9542213F162E94E6CF9766CD7289DEE5E7EB516EAE4BC249C0
+      4AD7E46741D11159600E78CA366AEE5CA9AC4C5AB64C5ABD5A0A87FDE079F972
+      A9BC5C9A374F9A3A55EF2D0927B912D4245D7867459CD013688E2C8E39E08B16
+      49AB5649EBD74BD5D5526DAD1F91885455255554484B96B824A929535C6DEE19
+      C15EC38A1826D8CEE7D80DB7C000CD9D2C30077CC30669EB56A9A1416A6A929A
+      9BA5C64669DB3669D32669CD1A9FC8ECD9FA3269929E9854141D4CB03D1A064F
+      6345DCE2D8A339B2C01C7080F7EE95DADBA58E0E69DF3EA9A545AAABF309AC58
+      219594B85350F4DB568B66C38CD2A074254D84B7B1A2730B054567648139E087
+      0F4BA74E49A74F4B478E48FBF74B3B764835357E5D28BE39EC1D3299D45D86E9
+      BA9FD6A73BF1331E773664319BD01BF63007BCA747EAED95E271E9E041A9B555
+      DAB2455AB74E5ABCD8B9EA83157BD0EA708E048C95BF264073648139E0FDFD52
+      22211D3A24B5B50D4BF07158023B463C2D110990089F23116EA1A0688E2C3007
+      3C16930E1C9076EEF4494006CB9A39B0EB7D4BF053A27491992DB43F8DE39A08
+      9F6345DC4241D11C59600E38ECEBEBA58D1BA5952BA5050B94B27E786575BC63
+      645BB2B3FD22A76D4A93315B687F8EEA18E173AC885B28289A030C73C0396165
+      A52FCF9C39FA5A50A0A766D32B99364D37DAD9A00ED8CC9D820EA589F03956C4
+      2DE84D200BCC015FBAD49D18F64C0026415FBAD1ECAE18322A2E07CDC66CA1FD
+      5D129A089FA333C5247846169823E7F4E9AE411F1BFBABB02F2CFC352A32871D
+      838A81C5E0A258340E1D4A1339670148209F698E2C3007FCA9D5EF9669BFE7F7
+      6197395A19B5B1200927C155B4BF4B847DA90D616E0118CD9105E6801F675CD7
+      D65EF8E38543124E42A1185CCC16EA4287D244F89CD3E1160A8AE6C8B22700FF
+      E385F3FB95C954A42ECC16DA9F0622F0395684445FA0F95FAFCC912EFD4870E9
+      33B8689C7341F08CCFF916F99F4B7FB49F2DD1117EB644FFF167CB0F331C5504
+      870F1DCB0000000049454E44AE426082
+    }
+  end
+  object Label9: TLabel
+    Left = 8
+    Height = 15
+    Top = 192
+    Width = 90
+    Caption = 'Bandwidth (KB):'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Shape5: TShape
+    Left = 0
+    Height = 4
+    Top = 132
+    Width = 313
+    Align = alTop
+    Brush.Color = 43263
+  end
+  object Shape6: TShape
+    Left = 0
+    Height = 4
+    Top = 32
+    Width = 313
+    Align = alTop
+    Brush.Color = 43263
+  end
+  object BandwidthChart: TChart
+    Left = 3
+    Height = 95
+    Top = 206
+    Width = 304
+    AxisList = <    
+      item
+        Grid.Color = clMedGray
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Range.Max = 2
+        Range.Min = -2
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Grid.Color = clMedGray
+        Grid.Visible = False
+        Visible = False
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    BackColor = clDefault
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    DoubleBuffered = True
+    object SentLineSeries: TLineSeries
+      AxisIndexX = 1
+      LinePen.Color = 9943551
+      LinePen.Width = 2
+    end
+    object ReceivedLineSeries: TLineSeries
+      LinePen.Color = 4227327
+      LinePen.Width = 2
+    end
+  end
+end

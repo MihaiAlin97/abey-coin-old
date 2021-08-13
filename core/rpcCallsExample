@@ -1,0 +1,101 @@
+*** Flattening the tree ***
+
+    - the nodes of a binary search tree nodes are put into an array representing the preorder traversal of the tree
+    - relevant functions: Flatten,Unflatten,Construct,Reconstruct
+
+  *** Serialization ***
+
+    - we split each node in the array into two parts which will be written to the stream at different positions
+    - relevant functions:Serialize,Unserialize
+
+   ** First part **
+
+      - { Value - 4bytes } { FirstOffset - 4bytes } { SecondOffset - 4 bytes }
+
+   ** Second part
+
+      - { NameSize - 4bytes } { Name - NameSize bytes} { ContentSize - 4 bytes } { Content = ContentSize bytes }
+
+
+   - FirstOffset points to the first byte in the Value field of the left child
+   - SecondOffset points to the first byte of the NameSize field of the current Node
+
+   Example:
+
+   Let us assume we have the following files and their content(ASCII encoding for both names and content):
+
+   Name:                 Content:
+       firstFile.txt         abcdef
+       secondFile.txt        abcdefg
+       thirdFile.txt         abcdefgh
+       fourthFile.txt        abcdefghi
+       fifthFile.txt         abcdefghij
+
+   We proceed constructing the nodes and storing them inside an array:
+
+               Value:             FirstOffset:      SecondOffset:      NameSize:      Name:                 ContentSize:      Content:
+   Index: 0      1771275350         0                 0                  13             firstFile.txt         6                 abcdef
+          1      193738685          0                 0                  14             secondFile.txt        7                 abcdefg
+          2      5247790            0                 0                  13             thirdFile.txt         8                 abcdefgh
+          3      1159916483         0                 0                  14             fourthFile.txt        9                 abcdefghi
+          4      40369949504        0                 0                  13             fifthFile.txt         10                abcdefghij
+
+
+   We sort the array and obtain the following:
+
+               Value:             FirstOffset:      SecondOffset:      NameSize:      Name:                 ContentSize:      Content:
+   Index: 0      5247790            0                 0                  13             thirdFile.txt         8                 abcdefgh
+          1      193738685          0                 0                  14             secondFile.txt        7                 abcdefg
+          2      1159916483         0                 0                  14             fourthFile.txt        9                 abcdefghi
+          3      1771275350         0                 0                  13             firstFile.txt         6                 abcdef
+          4      40369949504        0                 0                  13             fifthFile.txt         10                abcdefghij
+
+
+   We construct the following binary search tree from the sorted array:
+
+                                1159916483
+                           /                \
+                  5247790                      1771275350
+                           \                              \
+                             193738685                      40369949504
+
+
+
+  We flatten the tree and obtain pre-order traversal array ( First Offset parameter represents the index in array at this point ):
+
+               Value:             FirstOffset:      SecondOffset:      NameSize:      Name:                 ContentSize:      Content:
+   Index: 0      1159916483         1                 0                  14             fourthFile.txt        9                 abcdefghi
+          1      5247790            3                 0                  13             thirdFile.txt         8                 abcdefgh
+          2      193738685          4                 0                  14             secondFile.txt        7                 abcdefg
+          3      1771275350         4                 0                  13             firstFile.txt         6                 abcdef
+          4      40369949504        5                 0                  13             fifthFile.txt         10                abcdefghij
+
+
+  Computing the offsets in stream:
+
+  FirstOffset := Sizeof( NumberOfNodes ) + FirstOffset * (  Sizeof( Value ) + SizeOf ( FirstOffset  ) + SizeOf ( SecondOffset  )    )
+
+  Starting position of Second Part := Sizeof( NumberOfNodes ) + Sizeof( NumberOfNodes ) * ( (  Sizeof( Value ) + SizeOf ( FirstOffset  ) + SizeOf ( SecondOffset  ) )
+
+  We go through the elements of the array and write their bytes in the stream ( array of bytes or TMemoryStream ) :
+
+  Index: 0
+
+         { First Part ... }.....................................{ Second Part ... }
+
+         5   1159916483  1 * 12 + 4 64                              14 fourthFile.txt 9 abcdefghi
+             |                                                      |
+
+             CurrentPosition = 0                                    CurrentPosition = 4 + 5 * 12 ;
+                                                                                 = 64
+
+  Index: 1
+
+         { First Part ... }.....................................{ Second Part ... }
+
+         5   1159916483  (1 * 16) 64                                14 fourthFile.txt 9 abcdefghi
+                                                                                                |
+                                    |
+                                    CurrentPosition =  4 + 4 + 4 + 4                            CurrentPosition = 64 + 4 + 14 + 4 + 9 ;
+                                                    = 16                                                        = 95
+    

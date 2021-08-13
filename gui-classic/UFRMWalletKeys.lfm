@@ -1,0 +1,504 @@
+object FRMWalletKeys: TFRMWalletKeys
+  Left = 789
+  Height = 616
+  Top = 195
+  Width = 1048
+  BorderIcons = [biSystemMenu]
+  Caption = 'My Private Keys'
+  ClientHeight = 616
+  ClientWidth = 1048
+  Color = clWhite
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  Position = poOwnerFormCenter
+  LCLVersion = '2.0.8.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 20
+    Top = 36
+    Width = 1048
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 20
+    ClientWidth = 1048
+    TabOrder = 13
+    OnClick = Panel1Click
+    object Shape12: TShape
+      Left = 15
+      Height = 2
+      Top = 8
+      Width = 919
+      Anchors = [akTop, akLeft, akRight]
+      Pen.Color = 33023
+    end
+    object Shape13: TShape
+      Left = 14
+      Height = 32
+      Top = 8
+      Width = 2
+      Pen.Color = 33023
+    end
+    object Shape15: TShape
+      Left = 934
+      Height = 14
+      Top = 8
+      Width = 2
+      Anchors = [akTop, akRight]
+      Pen.Color = 33023
+    end
+  end
+  object Shape4: TShape
+    Left = 40
+    Height = 145
+    Top = 417
+    Width = 765
+    Anchors = [akLeft, akRight, akBottom]
+    Brush.Color = clBtnFace
+  end
+  object Shape3: TShape
+    Left = 824
+    Height = 518
+    Top = 56
+    Width = 224
+    Align = alRight
+    Pen.Style = psClear
+  end
+  object Shape9: TShape
+    Left = 839
+    Height = 256
+    Top = 184
+    Width = 200
+    Anchors = [akTop, akRight]
+    Pen.Color = 31218
+  end
+  object Shape1: TShape
+    Left = 0
+    Height = 32
+    Top = 0
+    Width = 1048
+    Align = alTop
+    Brush.Color = clBlack
+  end
+  object Shape10: TShape
+    Left = 839
+    Height = 97
+    Top = 451
+    Width = 200
+    Anchors = [akTop, akRight]
+    Pen.Color = 31218
+  end
+  object lblEncryptionTypeCaption: TLabel
+    Left = 125
+    Height = 13
+    Top = 443
+    Width = 156
+    Anchors = [akLeft, akBottom]
+    Caption = 'Encryption type of selected key:'
+    ParentColor = False
+  end
+  object lblEncryptionType: TLabel
+    Left = 301
+    Height = 13
+    Top = 443
+    Width = 63
+    Anchors = [akLeft, akBottom]
+    Caption = '000000000'
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblKeyNameCaption: TLabel
+    Left = 125
+    Height = 13
+    Top = 428
+    Width = 126
+    Anchors = [akLeft, akBottom]
+    Caption = 'Name of the selected key:'
+    ParentColor = False
+  end
+  object Shape8: TShape
+    Left = 839
+    Height = 97
+    Top = 75
+    Width = 200
+    Anchors = [akTop, akRight]
+    Pen.Color = 31218
+  end
+  object lblKeyName: TLabel
+    Left = 301
+    Height = 13
+    Top = 428
+    Width = 488
+    Anchors = [akLeft, akBottom]
+    AutoSize = False
+    Caption = '000000000'
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblPrivateKeyCaption: TLabel
+    Left = 125
+    Height = 13
+    Top = 469
+    Width = 171
+    Anchors = [akLeft, akBottom]
+    Caption = 'Your public key is listed below:'
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lbWalletKeys: TListBox
+    Left = 40
+    Height = 334
+    Top = 75
+    Width = 765
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ItemHeight = 0
+    OnClick = lbWalletKeysClick
+    ScrollWidth = 344
+    TabOrder = 0
+  end
+  object bbExportPrivateKey: TBitBtn
+    Left = 846
+    Height = 36
+    Top = 272
+    Width = 184
+    Anchors = [akTop, akRight]
+    Caption = 'Export Private Key'
+    OnClick = bbExportPrivateKeyClick
+    TabOrder = 12
+  end
+  object memoPrivateKey: TMemo
+    Left = 125
+    Height = 61
+    Top = 489
+    Width = 664
+    Anchors = [akLeft, akRight, akBottom]
+    Color = 14737632
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Courier New'
+    Lines.Strings = (
+      'memoPrivateKey'
+    )
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 4
+    TabStop = False
+  end
+  object bbChangeName: TBitBtn
+    Left = 656
+    Height = 25
+    Top = 457
+    Width = 133
+    Anchors = [akRight, akBottom]
+    Caption = 'Change Key''s Name'
+    OnClick = bbChangeNameClick
+    TabOrder = 8
+  end
+  object bbImportPrivateKey: TBitBtn
+    Left = 846
+    Height = 36
+    Top = 232
+    Width = 184
+    Anchors = [akTop, akRight]
+    Caption = 'Import A Private Key'
+    OnClick = bbImportPrivateKeyClick
+    TabOrder = 3
+  end
+  object bbExportPublicKey: TBitBtn
+    Left = 846
+    Height = 36
+    Top = 352
+    Width = 184
+    Anchors = [akTop, akRight]
+    Caption = 'Export Public Key'
+    OnClick = bbExportPublicKeyClick
+    TabOrder = 6
+  end
+  object bbImportPublicKey: TBitBtn
+    Left = 846
+    Height = 36
+    Top = 312
+    Width = 184
+    Anchors = [akTop, akRight]
+    Caption = 'Import Public Key'
+    OnClick = bbImportPublicKeyClick
+    TabOrder = 5
+  end
+  object bbGenerateNewKey: TBitBtn
+    Left = 846
+    Height = 36
+    Top = 192
+    Width = 184
+    Anchors = [akTop, akRight]
+    Caption = 'Generate A New Private Key'
+    OnClick = bbGenerateNewKeyClick
+    TabOrder = 2
+  end
+  object bbDelete: TBitBtn
+    Left = 846
+    Height = 36
+    Top = 392
+    Width = 184
+    Anchors = [akTop, akRight]
+    Caption = 'Delete Key'
+    OnClick = bbDeleteClick
+    TabOrder = 7
+  end
+  object bbUpdatePassword: TBitBtn
+    Left = 847
+    Height = 38
+    Top = 126
+    Width = 184
+    Anchors = [akTop, akRight]
+    Caption = 'Password'
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    OnClick = bbUpdatePasswordClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object bbExportAllWalletKeys: TBitBtn
+    Left = 847
+    Height = 36
+    Top = 462
+    Width = 184
+    Anchors = [akTop, akRight]
+    Caption = 'Export All Keys'
+    OnClick = bbExportAllWalletKeysClick
+    TabOrder = 9
+  end
+  object bbImportKeysFile: TBitBtn
+    Left = 847
+    Height = 36
+    Top = 502
+    Width = 184
+    Anchors = [akTop, akRight]
+    Caption = 'Import Keys'
+    OnClick = bbImportKeysFileClick
+    TabOrder = 10
+  end
+  object bbLock: TBitBtn
+    Left = 847
+    Height = 38
+    Top = 84
+    Width = 184
+    Anchors = [akTop, akRight]
+    Caption = 'Encrypt Wallet'
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    OnClick = bbLockClick
+    ParentFont = False
+    TabOrder = 11
+  end
+  object Label11: TLabel
+    Left = 8
+    Height = 15
+    Top = 8
+    Width = 155
+    Caption = 'Configure Your Private Keys'
+    Font.Color = clWhite
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Shape5: TShape
+    Left = 0
+    Height = 4
+    Top = 32
+    Width = 1048
+    Align = alTop
+    Brush.Color = 43263
+  end
+  object Shape2: TShape
+    Left = 0
+    Height = 38
+    Top = 578
+    Width = 1048
+    Align = alBottom
+    Brush.Color = clBlack
+  end
+  object Shape6: TShape
+    Left = 0
+    Height = 4
+    Top = 574
+    Width = 1048
+    Align = alBottom
+    Brush.Color = 43263
+  end
+  object lblWalletStatus: TLabel
+    Left = 8
+    Height = 15
+    Top = 590
+    Width = 277
+    Anchors = [akLeft, akBottom]
+    Caption = 'WARNING: Your wallet is currently not encrypted.'
+    Font.Color = 125950
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Shape7: TShape
+    Left = 820
+    Height = 518
+    Top = 56
+    Width = 4
+    Align = alRight
+    Brush.Color = 43263
+  end
+  object Label1: TLabel
+    Left = 40
+    Height = 13
+    Top = 56
+    Width = 403
+    Caption = 'Please select a key from the list of private keys that you currently own:'
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Image1: TImage
+    Left = 48
+    Height = 64
+    Top = 425
+    Width = 64
+    Anchors = [akLeft, akBottom]
+    AutoSize = True
+    OnClick = Image1Click
+    Picture.Data = {
+      1754506F727461626C654E6574776F726B477261706869630907000089504E47
+      0D0A1A0A0000000D4948445200000040000000400806000000AA6971DE000000
+      0774494D4507E4050801143AA535307B000000097048597300000B1300000B13
+      01009A9C180000000467414D410000B18F0BFC6105000006984944415478DAED
+      597B4C535718BFBC0AE3258F812D1B2F070A22F246148141C00E283E80AA380A
+      3E02D28250AD0282B8252E06FF58A28B8FFDB364738FC41967CC96C5B965CBE2
+      B2283AA7D34CA74E3323662118652A8A4EB7DF577AE0B6A1424BE5BAECFC9293
+      B65FCF3DF7FBBEF33D7EE75E41E0E0E0E0E0E0E0E0E0E0E0E0E0E0E0E0180575
+      757559191919DBF0F504C66D8C1E8CC3C5C5C586A6A6A618A9F57B2630180CE1
+      E5E5E5ED89898927FCFCFCFE82E89F11C663B95CDE9399997958A3D154B7B5B5
+      794BADF7B8D1DCDCFCA24AA57AC7C9C9E99EA5B1414141BD616161D730BABDBD
+      BDFB2C1D121E1EFEC7B265CBB41D1D1D4E52DB61176A6A6A540A85A29B192493
+      C9EE6567671FA802D6AE5D1BB771E3C6C0F6F6764F0CEF969616F99A356B662D
+      5EBCD8909494F4A3D811A9A9A947D7AD5B1725B53D36810C1119F1A4A8A868F7
+      FAF5EB23C77A7D7D7DFDDCF4F4F46FD81A5E5E5EBD3A9D2E476ABBC604B55ADD
+      2C0C87F115189365EF5A9595953A7C0C98D6EB7FEE9DB072E54A35333E2121E1
+      246AC0E4F1AE89AE9187F431D688499326F5201DC61C49130A847828852A293A
+      65CA94DF90D7418E5A5BABD516E0E311AD9D92927274D5AA5525188B304A2762
+      60634B51D38AD0CD5EB1AA645E5EDE5E6170F70750D0521DEDE0A54B978AEB8A
+      5463006DFA4BBD5E1F6BA61C0C4EC4C7639A347FFEFCAD2319806AEF86DEEE6E
+      AF03366FDEEC842E728822016DF5FE440E6767E7FBB8EFDFCC113E3E3EB76073
+      DA9072E8F53BE90F7F7FFF1ECBD0A710CACACAFA1C05F1524848C855B4B5EFD1
+      DFEBE1100F3B9CE0B261C386708C88091EE1A83D312073ADAEAEAEFD646B4C4C
+      CC59A44400E57E506464E4EF24542A95BB443BEE919B9BFBA9B5708A8D8D3DF5
+      DC16B4A7405CE8A74E9DFA8580906F40883C24C1EAD5AB0BD844D4844F44C69E
+      2E2B2B7B03FCA0392D2DED2B269F366DDA39A4858FD446D90A50FA93CC062130
+      30D0C8DCD0A26E11A3A309B5B5B54A3661DEBC797B366DDA6446672B2A2AB4EC
+      FF850B1776486D90ADC0E6BE270C47B360E4F9717171BF82B7BB9200A1FF01C9
+      A2A3A32F2015645616D94773A64F9F7E0ED7B9486D942D00B3DD297680F10BC2
+      E2189B8002D145B2929292DDD616791DA03988A0BED6D65685D446D9829C9C9C
+      0F4773C071930376595BE4BFEC00D87A5CEC80BBC2600A9CFF3FA4000AFD6BF8
+      78220C32DEAFA9081E15068BE06D1441E34E5A14C17727AA0836353525E0A83D
+      C4D26843C0391A719E503219DAF6CBA5A5A59D8D8D8DE94C065293493256C409
+      CB972FD72C59B2A485BEE3E8EE0F3DB78088ED777777376E784444C465DC2F94
+      DAA0166CC9D8064D861B61D1067F16B5C123C2701B3C6B6B1B2442A2D168B438
+      688588E5555555D5A69D79805E5D4EB28282828FD8BD56AC58A181F18AA8A8A8
+      F326D91D3866369D56DDDCDC8C853C3E3EFE34D60D161FE7172C58D009C30F0A
+      220EE3EBEB7B73E8948B0B0211EA97D96E33854C44689F60850821656C264294
+      2AB8EE34538294A31327765967B1FE839933671E13CB5C5C5C06828383BBC532
+      0F0F8F3E1CE0CC1ED161CE0DC144EB2D475252D20F60836FC29161668AA1D8ED
+      A009010101BD08A360F17F38452D721415AEAEAEAEB0540ABCBCCFB4F3C4CC2E
+      22AA2E8AFFC7261C44D13A2396C171DB150A450FFB2D97CBFF2C2C2C7C5B3C07
+      51FB13D6BAC07ECF9933E79055C5904FF182E9B08094E81C69CE780F43E8147E
+      A0DC5784C1670D678A8B8BA9C5F633051185E7C0D943282210CA46A6969F9F4F
+      545C80FC2544CE2F2443F3A16811743ADD5CDA3044400FC27936C9B03175E44C
+      18DF8575FC6057B24C26BB85FB5EC21AF2A72A889BBD6F52E6614343C32C7B0D
+      B506D4948F99B1C8DD7C92D1B3422225D8E5FD620551B47C518FF290326E4C46
+      B50605325ABC26AE996CF9D086D21273BDD86F44F464383F605405C9CBE808C6
+      B0A27077C4D3200684EC5BCC7818BCC3D1CE7518E8E8CB1445989E8213C64D70
+      505FB6B235535252BE454B7595DACEA702BD73A8852012AE22D7B2ED5987DA11
+      28E701B6D68C1933BA108AFE52DB375627E885E18AFA44A954EE19EB637114CB
+      172A2B2BEB904E37D81A19191947A8084A6D974D40112A42DBBBCE8C4035ED07
+      A1F80C24A64AAFD79BBD182152A3D56A73552AD53630ACAB8279CBEA44D83B4B
+      6D8F5D40050D8451DBC114EF0AE6FD9B5E8DDDA45763A1A1A1D7412FEF58FC4F
+      BBFE1DD267B6D43638040683210C0CAA2D3939B9CBDACB5138E9110E17D7902E
+      7B71E078556A9D9F194CAFC7892CB1D7E3373C3D3D0FA9D5EA9A51C906070707
+      070707070707070707070707C773807F011E2262C96C89F36E0000000049454E
+      44AE426082
+    }
+  end
+  object btnKeys1: TShape
+    Left = 0
+    Height = 4
+    Top = 204
+    Width = 16
+    Brush.Color = 33023
+    Pen.Color = 33023
+    Pen.Cosmetic = False
+  end
+  object Shape11: TShape
+    Left = 14
+    Height = 443
+    Top = 56
+    Width = 2
+    Anchors = [akTop, akLeft, akBottom]
+    Pen.Color = 33023
+  end
+  object btnKeys2: TShape
+    Left = 15
+    Height = 2
+    Top = 278
+    Width = 25
+    Anchors = [akLeft]
+    Pen.Color = 33023
+    Pen.Cosmetic = False
+  end
+  object btnKeys3: TShape
+    Left = 15
+    Height = 2
+    Top = 497
+    Width = 25
+    Anchors = [akLeft, akBottom]
+    Pen.Color = 33023
+    Pen.Cosmetic = False
+  end
+  object Shape14: TShape
+    Left = 824
+    Height = 4
+    Top = 56
+    Width = 225
+    Anchors = [akTop, akRight]
+    Brush.Color = 43263
+  end
+  object SaveDialog: TSaveDialog
+    DefaultExt = '.keys'
+    Filter = 'Wallet keys file|*.keys|All files|*.*'
+    FilterIndex = 0
+    left = 360
+    top = 608
+  end
+  object OpenDialog: TOpenDialog
+    DefaultExt = '.keys'
+    Filter = 'Wallet keys file (*.keys)|*.keys|All files (*.*)|*.*'
+    FilterIndex = 0
+    left = 328
+    top = 608
+  end
+end
