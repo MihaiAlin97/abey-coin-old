@@ -1,0 +1,1 @@
+ABEY_Miner.exe -c 1 -s 192.168.158.134 -n Ryzen3600X

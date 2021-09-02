@@ -1,4 +1,0 @@
--o "bytecode"
-in/build/events
-in/build/g_syscalls
-in/build/g_events

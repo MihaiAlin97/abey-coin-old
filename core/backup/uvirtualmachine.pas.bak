@@ -36,11 +36,6 @@ type
         sign: TECDSA_SIG;
       End;
 
-
-
-
-
-
   { TOpExecuteContractData}
   TOpExecuteContractData = Record
     account_signer, contractID : Cardinal;
@@ -523,14 +518,14 @@ begin
     //check file paths here as we can prevent the error here
     if (Not(FileExists(ExportTablePath))) then begin
        ErrorNum := CT_RPC_ErrNum_ExportTableFilePath;
-       ErrorDesc := 'Invalid path to export table file'+ExportTablePath;
+       ErrorDesc := 'Invalid path to export table file';
        Errors := ErrorDesc;
        Exit;
     end;
 
     if (Not(FileExists(BytecodePath))) then begin
       ErrorNum := CT_RPC_ErrNum_PayloadFilePath;
-      ErrorDesc := 'Invalid path to bytecode file'+BytecodePath;
+      ErrorDesc := 'Invalid path to bytecode file';
       Errors := ErrorDesc;
       Exit;
     end;
@@ -795,7 +790,7 @@ begin
     else
     begin
       ErrorNum := CT_RPC_ErrNum_InvalidParameterTypeForContract;
-      ErrorDesc := 'Invalid Parameter Type for execute contract v2';
+      ErrorDesc := 'Invalid Parameter Type for execute contract';
     end;
 
   end;
@@ -1422,13 +1417,11 @@ class procedure TSmartContractHelper.PrintExecuteContractOperationData(Data : UV
 var FunctionName:String;
 begin
    FunctionName:='PrintExecuteContractOperationData';
-
    TLog.NewLog(ltInfo,ClassName,FunctionName + 'PrintExecuteContractOperationData');
    TLog.NewLog(ltInfo,Classname,FunctionName + 'account_signer ' + IntToStr(Data.account_signer));
    TLog.NewLog(ltInfo,Classname,FunctionName + 'n_operation ' + IntToStr(Data.n_operation));
    TLog.NewLog(ltInfo,Classname,FunctionName + 'fee ' + IntToStr(Data.fee));
    TLog.NewLog(ltInfo,Classname,FunctionName + 'function_name ' + Data.function_name);
-
 end;
 
 
@@ -1512,7 +1505,7 @@ begin
    TLog.NewLog(ltInfo,ClassName,'SaveContractExecutionDataToDatabase');
    Result := False;
 
-   // get database for saving contracts
+   //get database for saving contracts
    PathToDb := TFolderHelper.GetContractStorageFolder;
 
    ContractExecutionDatabase := TABEYBlockchainDBStorage.GetInstance('Execution', (PathToDB), ErrorNum);
@@ -1526,7 +1519,7 @@ begin
       Exit;
    end;
 
-   // be sure position in stream is set in the beginning
+   //be sure position in stream is set in the beginning
    ContractExecutionData.Seek(0,soBeginning);
 
    ErrorNum := ContractExecutionDatabase.InsertItem( IntToStr( ContractId ),ContractExecutionData ) ;
@@ -1560,6 +1553,7 @@ begin
    ContractExecutionDatabase := TABEYBlockchainDBStorage.GetInstance('Execution', (PathToDB), ErrorNum);
 
    // check to see if instance exists
+
    if ErrorNum <> CT_SUCCESS then
    begin
       ErrorDesc := 'Error getting execution database for contracts, Error Number = ' + IntToStr(ErrorNum);
@@ -1609,7 +1603,7 @@ begin
   TLog.NewLog(ltInfo,ClassName,'LoadContractInitializationDataFromDatabase');
   Result := False;
 
-   //get database for saving contracts
+  //get database for saving contracts
    PathToDb := TFolderHelper.GetContractStorageFolder;
 
    ContractInitializationDatabase := TABEYBlockchainDBStorage.GetInstance('Initialization', (PathToDB), ErrorNum);
@@ -1775,7 +1769,6 @@ var
       BytecodeSize:Cardinal;
       DataSegmentSize:Cardinal;
 
-      FolderPath:String;
       BytecodePath:String;
       ExportTablePath:String;
       DataSegmentPath:String;

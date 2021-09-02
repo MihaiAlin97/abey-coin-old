@@ -1,0 +1,124 @@
+object FRMNewPrivateKeyType: TFRMNewPrivateKeyType
+  Left = 763
+  Height = 265
+  Top = 434
+  Width = 471
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Create A Key'
+  ClientHeight = 265
+  ClientWidth = 471
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '2.0.8.0'
+  object Label1: TLabel
+    Left = 24
+    Height = 13
+    Top = 48
+    Width = 224
+    Caption = 'Please enter a name for your new private key:'
+    ParentColor = False
+  end
+  object ebName: TEdit
+    Left = 24
+    Height = 21
+    Top = 64
+    Width = 424
+    TabOrder = 0
+    Text = 'ebName'
+  end
+  object rgKeyType: TRadioGroup
+    Left = 24
+    Height = 105
+    Top = 112
+    Width = 424
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 87
+    ClientWidth = 420
+    Items.Strings = (
+      'asdf'
+    )
+    TabOrder = 1
+  end
+  object Shape13: TShape
+    Left = 0
+    Height = 4
+    Top = 32
+    Width = 471
+    Align = alTop
+    Brush.Color = 43263
+  end
+  object Shape12: TShape
+    Left = 0
+    Height = 32
+    Top = 0
+    Width = 471
+    Align = alTop
+    Brush.Color = clBlack
+  end
+  object Label17: TLabel
+    Left = 8
+    Height = 15
+    Top = 9
+    Width = 149
+    Caption = 'Generate New Private Key'
+    Font.Color = clWhite
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Shape14: TShape
+    Left = 0
+    Height = 32
+    Top = 233
+    Width = 471
+    Align = alBottom
+    Brush.Color = clBlack
+  end
+  object Shape15: TShape
+    Left = 0
+    Height = 4
+    Top = 229
+    Width = 471
+    Align = alBottom
+    Brush.Color = 43263
+  end
+  object bbOk: TButton
+    Left = 392
+    Height = 25
+    Top = 237
+    Width = 75
+    Caption = 'Create Key'
+    OnClick = bbOkClick
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 312
+    Height = 25
+    Top = 237
+    Width = 75
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 3
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 13
+    Top = 96
+    Width = 259
+    Caption = 'Please select the type of the private key to generate:'
+    ParentColor = False
+  end
+end

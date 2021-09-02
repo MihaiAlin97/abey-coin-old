@@ -1,0 +1,1 @@
+ABEY_Miner.exe -p 0 -d 0 -s 192.168.158.134 -n CMiner

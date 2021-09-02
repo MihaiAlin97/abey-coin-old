@@ -1,0 +1,113 @@
+object SettingsForm: TSettingsForm
+  Left = 206
+  Height = 231
+  Top = 110
+  Width = 338
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Settings'
+  ClientHeight = 231
+  ClientWidth = 338
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '0.9.29'
+  object Label1: TLabel
+    Left = 13
+    Height = 14
+    Top = 83
+    Width = 144
+    Caption = 'Save changed diagram layout'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 14
+    Height = 14
+    Top = 152
+    Width = 138
+    Caption = 'Default diagram visibilty filter'
+    ParentColor = False
+  end
+  object OkButton: TButton
+    Left = 175
+    Height = 25
+    Top = 199
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'OK'
+    Default = True
+    OnClick = OkButtonClick
+    TabOrder = 0
+  end
+  object ShellCheck: TCheckBox
+    Left = 13
+    Height = 19
+    Top = 16
+    Width = 219
+    Caption = 'Shortcut on contextmenu for sourcefiles'
+    OnClick = ShellCheckClick
+    TabOrder = 1
+  end
+  object DelphiIDECheck: TCheckBox
+    Left = 13
+    Height = 19
+    Top = 41
+    Width = 198
+    Caption = 'Shortcut on Tools menu in Delphi IDE'
+    OnClick = DelphiIDECheckClick
+    TabOrder = 2
+  end
+  object DiSaveCombo: TComboBox
+    Left = 163
+    Height = 24
+    Top = 81
+    Width = 70
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      'always'
+      'ask'
+      'never'
+    )
+    Style = csDropDownList
+    TabOrder = 3
+    Text = 'always'
+  end
+  object Button2: TButton
+    Left = 257
+    Height = 25
+    Top = 199
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 4
+  end
+  object ShowAssocCheck: TCheckBox
+    Left = 13
+    Height = 19
+    Top = 120
+    Width = 226
+    Caption = 'Show associations in diagrams as default'
+    TabOrder = 5
+  end
+  object VisibilityCombo: TComboBox
+    Left = 156
+    Height = 24
+    Top = 148
+    Width = 145
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      'Show all members'
+      'Hide private'
+      'Hide private + protected'
+      'Hide all members'
+    )
+    Style = csDropDownList
+    TabOrder = 6
+    TabStop = False
+    Text = 'Show all members'
+  end
+end

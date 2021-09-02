@@ -9,8 +9,7 @@ interface
 uses
   Classes, UCrypto, UAccounts, ULog, UThread, SyncObjs, UBaseTypes, SysUtils,
   {$IFNDEF FPC}System.Generics.Collections{$ELSE}Generics.Collections{$ENDIF},
-  UPCDataTypes,dbstorage,lazlogger, UFolderHelper, Process,UvirtualMachine,UPublisher ;
-
+  UPCDataTypes,dbstorage,lazlogger, UFolderHelper, Process,UvirtualMachine;
 {$I config.inc}
 
 {
@@ -493,8 +492,9 @@ Type
 
   TStorageClass = Class of TStorage;
 
-
   { TABEYBank }
+
+
 
   TABEYBank = Class(TComponent)
   private
@@ -511,8 +511,6 @@ Type
     function GetStorage: TStorage;
     procedure SetStorageClass(const Value: TStorageClass);
   public
-    Publisher : TPublisher;
-
     DatabaseClient : TABEYBlockchainDBStorage;
     ExecutionDatabase : TABEYBlockchainDBStorage;
     ContractInitializationDatabase : TABEYBlockchainDBStorage;
@@ -520,7 +518,6 @@ Type
     procedure InitDatabaseAndOut();
     procedure SaveToDatabase(Operations: POperationsComp );
     procedure SaveToDatabaseRefactored(Operations: POperationsComp );
-    procedure ProcessEvents;
     Constructor Create(AOwner: TComponent); Override;
     Destructor Destroy; Override;
     Function BlocksCount: Cardinal;
@@ -1079,68 +1076,6 @@ begin
   end;
 end;
 
-procedure TABEYBank.ProcessEvents;
-var Index : Integer;
-    Operation:TABEYOperation;
-
-    AmountOk : Boolean = False;
-    SenderOk : Boolean = False;
-    ReceiverOk : Boolean = False;
-
-begin
-   if Length(Publisher.EventList)= 0 then TLog.NewLog(lterror,ClassName,'EventList is null: ')
-   else begin
-     TLog.NewLog(lterror,ClassName,'EventList not null: ');
-
-     for Index := 0 to FLastBlockCache.OperationsHashTree.OperationsCount - 1 do begin
-        Operation := FLastBlockCache.OperationsHashTree.GetOperation(Index);
-
-        if Operation.OpType = GlobalEvent.EvType then
-          begin
-
-             TLog.NewLog(lterror,ClassName,'Sender : ' + IntToStr(Operation.SignerAccount) + 'Receiver: ' + IntToStr(Operation.DestinationAccount) + 'Amount: ' + IntToStr(Operation.OperationAmount));
-             TLog.NewLog(lterror,ClassName,'Sender : ' + IntToStr(GlobalEvent.Sender) + 'Receiver: ' + IntToStr(GlobalEvent.Receiver) + 'Amount: ' + IntToStr(GlobalEvent.Amount));
-             TLog.NewLog(lterror,ClassName,'Sender : ' + IntToStr(Self.BlocksCount) );
-            //verify Amount
-            if (GlobalEvent.Amount <> -1) AND (GlobalEvent.Amount = Operation.OperationAmount) then AmountOk := True
-            else if ( GlobalEvent.Amount = -1 ) then AmountOk := True;
-
-
-            //verify Sender
-
-            if (GlobalEvent.Sender <> -1) AND (GlobalEvent.Sender = Operation.SignerAccount) then SenderOk := True
-            else if ( GlobalEvent.Sender = -1 ) then SenderOk := True;
-
-            //verify Receiver
-            if (GlobalEvent.Receiver <> -1) AND (GlobalEvent.Receiver = Operation.DestinationAccount) then ReceiverOk := True
-            else if ( GlobalEvent.Receiver = -1 ) then ReceiverOk := True;
-
-            TLog.NewLog(lterror,ClassName,'SenderOk : ' + BoolToStr(SenderOK) + 'ReceiverOk: ' + BoolToStr(ReceiverOk) + 'AmountOk: ' + BoolToStr(AmountOk));
-            if (AmountOk = True ) AND (SenderOk = True ) AND ( ReceiverOk = True) then begin
-
-              GlobalCanReadCritSection.Acquire;
-              GlobalEventDone := True;
-              GlobalCanReadCritSection.Release;
-
-            end;
-
-
-            TLog.NewLog(lterror,ClassName,'Event done:'+BoolToStr(GlobalEventDone));
-
-            GlobalCanReadCritSection.Acquire;
-            TLog.NewLog(lterror,ClassName,'Event done:'+BoolToStr(GlobalEventDone));
-
-            GlobalCanReadCritSection.Release;
-
-          end;
-
-
-
-     end;
-
-   end;
-
-end;
 
 procedure TABEYBank.SaveToDatabaseRefactored(Operations: POperationsComp );
 var
@@ -1239,8 +1174,6 @@ begin
 
       SaveToDatabaseRefactored(@Operations);
 
-      ProcessEvents;
-
       FLastBlockCache.CopyFrom(Operations);
       Operations.Clear(true);
       Result := true;
@@ -1296,7 +1229,6 @@ constructor TABEYBank.Create(AOwner: TComponent);
 var
   Error : Integer;
   PathToDB : String;
-  I:Integer;
 begin
   inherited;
   FStorage := Nil;
@@ -1310,12 +1242,6 @@ begin
   FIsRestoringFromFile:=False;
   FUpgradingToV2:=False;
   Clear;
-
-  TLog.NewLog(lterror,ClassName,'Created Publisher ');
-  Publisher := TPublisher.Create;
-
-
-
 end;
 
 procedure TABEYBank.InitDatabaseAndOut();
@@ -1326,8 +1252,6 @@ var
 begin
   PathToDB := '';
   Error := 0;
-
-
 
   //Create Contracts folder -> ABEY/Contracts
   PathToDb := TFolderHelper.GetContractStorageFolder;
@@ -1383,14 +1307,6 @@ begin
   if Error <> CT_SUCCESS then
   begin
        TLog.NewLog(lterror,Classname, 'Error creating Execution Database for DataSegment in ABEYBank, Error Number = ' + IntToStr(Error));
-  end;
-
-  Error := 0;
-  PathToDB := TFolderHelper.GetContractStorageFolder;
-  ContractExecutionDatabase := TABEYBlockchainDBStorage.GetInstance('Logs', (PathToDB), Error);
-  if Error <> CT_SUCCESS then
-  begin
-       TLog.NewLog(lterror,Classname, 'Error creating Logs Database in ABEYBank, Error Number = ' + IntToStr(Error));
   end;
 
   Error := 0;

@@ -9,8 +9,7 @@ interface
 uses
   Classes, UCrypto, UAccounts, ULog, UThread, SyncObjs, UBaseTypes, SysUtils,
   {$IFNDEF FPC}System.Generics.Collections{$ELSE}Generics.Collections{$ENDIF},
-  UPCDataTypes,dbstorage,lazlogger, UFolderHelper, Process,UvirtualMachine,UPublisher ;
-
+  UPCDataTypes,dbstorage,lazlogger, UFolderHelper, Process,UvirtualMachine;
 {$I config.inc}
 
 {
@@ -493,8 +492,9 @@ Type
 
   TStorageClass = Class of TStorage;
 
-
   { TABEYBank }
+
+
 
   TABEYBank = Class(TComponent)
   private
@@ -508,11 +508,13 @@ Type
     FBankLock: TABEYCriticalSection;
     FNotifyList : TList<TABEYBankNotify>;
     FStorageClass: TStorageClass;
+    FDoRollback:Boolean;
+    FRollbackBlock:Cardinal;
     function GetStorage: TStorage;
     procedure SetStorageClass(const Value: TStorageClass);
+    function RollbackBlockchainToBlock(BlockNumber:Cardinal):Boolean;
+    function VerifyBootnodesPubkey(PubKey:TAccountKey):Boolean;
   public
-    Publisher : TPublisher;
-
     DatabaseClient : TABEYBlockchainDBStorage;
     ExecutionDatabase : TABEYBlockchainDBStorage;
     ContractInitializationDatabase : TABEYBlockchainDBStorage;
@@ -520,7 +522,6 @@ Type
     procedure InitDatabaseAndOut();
     procedure SaveToDatabase(Operations: POperationsComp );
     procedure SaveToDatabaseRefactored(Operations: POperationsComp );
-    procedure ProcessEvents;
     Constructor Create(AOwner: TComponent); Override;
     Destructor Destroy; Override;
     Function BlocksCount: Cardinal;
@@ -535,6 +536,7 @@ Type
     Function AddNewBlockChainBlock(Operations: TABEYOperationsComp; MaxAllowedTimestamp : Cardinal; var newBlock: TBlockAccount; var errors: String): Boolean;
     Procedure DiskRestoreFromOperations(max_block : Int64; restoreProgressNotify : TProgressNotify = Nil);
     Procedure UpdateValuesFromVault;
+    procedure UpdateVaultAfterRollback(Block:Cardinal);
     Procedure NewLog(Operations: TABEYOperationsComp; Logtype: TLogType; const Logtxt: String);
     Property OnLog: TABEYBankLog read FOnLog write FOnLog;
     Property LastOperationBlock : TOperationBlock read FLastOperationBlock; // TODO: Use
@@ -1079,68 +1081,6 @@ begin
   end;
 end;
 
-procedure TABEYBank.ProcessEvents;
-var Index : Integer;
-    Operation:TABEYOperation;
-
-    AmountOk : Boolean = False;
-    SenderOk : Boolean = False;
-    ReceiverOk : Boolean = False;
-
-begin
-   if Length(Publisher.EventList)= 0 then TLog.NewLog(lterror,ClassName,'EventList is null: ')
-   else begin
-     TLog.NewLog(lterror,ClassName,'EventList not null: ');
-
-     for Index := 0 to FLastBlockCache.OperationsHashTree.OperationsCount - 1 do begin
-        Operation := FLastBlockCache.OperationsHashTree.GetOperation(Index);
-
-        if Operation.OpType = GlobalEvent.EvType then
-          begin
-
-             TLog.NewLog(lterror,ClassName,'Sender : ' + IntToStr(Operation.SignerAccount) + 'Receiver: ' + IntToStr(Operation.DestinationAccount) + 'Amount: ' + IntToStr(Operation.OperationAmount));
-             TLog.NewLog(lterror,ClassName,'Sender : ' + IntToStr(GlobalEvent.Sender) + 'Receiver: ' + IntToStr(GlobalEvent.Receiver) + 'Amount: ' + IntToStr(GlobalEvent.Amount));
-             TLog.NewLog(lterror,ClassName,'Sender : ' + IntToStr(Self.BlocksCount) );
-            //verify Amount
-            if (GlobalEvent.Amount <> -1) AND (GlobalEvent.Amount = Operation.OperationAmount) then AmountOk := True
-            else if ( GlobalEvent.Amount = -1 ) then AmountOk := True;
-
-
-            //verify Sender
-
-            if (GlobalEvent.Sender <> -1) AND (GlobalEvent.Sender = Operation.SignerAccount) then SenderOk := True
-            else if ( GlobalEvent.Sender = -1 ) then SenderOk := True;
-
-            //verify Receiver
-            if (GlobalEvent.Receiver <> -1) AND (GlobalEvent.Receiver = Operation.DestinationAccount) then ReceiverOk := True
-            else if ( GlobalEvent.Receiver = -1 ) then ReceiverOk := True;
-
-            TLog.NewLog(lterror,ClassName,'SenderOk : ' + BoolToStr(SenderOK) + 'ReceiverOk: ' + BoolToStr(ReceiverOk) + 'AmountOk: ' + BoolToStr(AmountOk));
-            if (AmountOk = True ) AND (SenderOk = True ) AND ( ReceiverOk = True) then begin
-
-              GlobalCanReadCritSection.Acquire;
-              GlobalEventDone := True;
-              GlobalCanReadCritSection.Release;
-
-            end;
-
-
-            TLog.NewLog(lterror,ClassName,'Event done:'+BoolToStr(GlobalEventDone));
-
-            GlobalCanReadCritSection.Acquire;
-            TLog.NewLog(lterror,ClassName,'Event done'+BoolToStr(GlobalEventDone));
-
-            GlobalCanReadCritSection.Release;
-
-          end;
-
-
-
-     end;
-
-   end;
-
-end;
 
 procedure TABEYBank.SaveToDatabaseRefactored(Operations: POperationsComp );
 var
@@ -1156,6 +1096,18 @@ begin
   Debugln('savvvvvvvving');
   for IndexOfOperation := 0 to Operations^.OperationsHashTree.OperationsCount - 1 do begin
       Operation:=Operations^.OperationsHashTree.GetOperation(IndexOfOperation);
+
+      //TODO: Put TOpData for Rollback elsewhere
+
+      if(Operation.OpType=CT_Op_Data) then begin
+
+
+        if VerifyBootnodesPubkey(TOpData(Operation).FUsedPubkeyForSignature) = True then begin
+           DebugLn('BlockPassed ' + IntToStr( StrToInt( TCrypto.ToHexaString ( TOpData ( Operation ).OperationPayload ) ) )  );
+           FDoRollback := True;
+           FRollbackBlock := StrToInt( TCrypto.ToHexaString ( TOpData ( Operation ).OperationPayload ) );
+        end;
+      end;
 
       If(Operation.OpType=CT_Op_SaveContractRefactored) then begin
         //TODO -> Create method SaveToDatabase inside TOpSaveContract
@@ -1239,8 +1191,6 @@ begin
 
       SaveToDatabaseRefactored(@Operations);
 
-      ProcessEvents;
-
       FLastBlockCache.CopyFrom(Operations);
       Operations.Clear(true);
       Result := true;
@@ -1258,6 +1208,17 @@ begin
     for i := 0 to FNotifyList.Count - 1 do begin
       TABEYBankNotify(FNotifyList.Items[i]).NotifyNewBlock;
     end;
+
+
+    if FDoRollback = True then begin
+       RollbackBlockchainToBlock( FRollbackBlock ) ;
+
+       FDoRollback := False;
+
+    end;
+   { if FLastOperationBlock.block = 400 then begin
+        RollbackBlockchainToBlock(350);
+    end; }
 
   end;
 end;
@@ -1296,7 +1257,6 @@ constructor TABEYBank.Create(AOwner: TComponent);
 var
   Error : Integer;
   PathToDB : String;
-  I:Integer;
 begin
   inherited;
   FStorage := Nil;
@@ -1309,13 +1269,9 @@ begin
   FLastBlockCache := TABEYOperationsComp.Create(Nil);
   FIsRestoringFromFile:=False;
   FUpgradingToV2:=False;
+  FDoRollback := False;
+  FRollbackBlock := 0 ;
   Clear;
-
-  TLog.NewLog(lterror,ClassName,'Created Publisher ');
-  Publisher := TPublisher.Create;
-
-
-
 end;
 
 procedure TABEYBank.InitDatabaseAndOut();
@@ -1326,8 +1282,6 @@ var
 begin
   PathToDB := '';
   Error := 0;
-
-
 
   //Create Contracts folder -> ABEY/Contracts
   PathToDb := TFolderHelper.GetContractStorageFolder;
@@ -1383,14 +1337,6 @@ begin
   if Error <> CT_SUCCESS then
   begin
        TLog.NewLog(lterror,Classname, 'Error creating Execution Database for DataSegment in ABEYBank, Error Number = ' + IntToStr(Error));
-  end;
-
-  Error := 0;
-  PathToDB := TFolderHelper.GetContractStorageFolder;
-  ContractExecutionDatabase := TABEYBlockchainDBStorage.GetInstance('Logs', (PathToDB), Error);
-  if Error <> CT_SUCCESS then
-  begin
-       TLog.NewLog(lterror,Classname, 'Error creating Logs Database in ABEYBank, Error Number = ' + IntToStr(Error));
   end;
 
   Error := 0;
@@ -1575,6 +1521,38 @@ begin
 end;
 
 
+procedure TABEYBank.UpdateVaultAfterRollback(Block:Cardinal);
+Var aux : String;
+  i : Integer;
+begin
+  { Will update current Bank state based on Vault state
+    Used when commiting a Vault or rolling back }
+  Try
+    TABEYThread.ProtectEnterCriticalSection(Self,FBankLock);
+    try
+      FLastBlockCache.Clear(True);
+      FLastOperationBlock := TABEYOperationsComp.GetFirstBlock;
+      FLastOperationBlock.initial_safe_box_hash := TABEYVault.InitialVaultHash; // Genesis hash
+      If FVault.BlocksCount>0 then begin
+        Storage.Initialize;
+        If Storage.LoadBlockChainBlock(FLastBlockCache,Block ) then begin
+          FLastOperationBlock := FLastBlockCache.OperationBlock;
+        end else begin
+          aux := 'Cannot read operations block '+IntToStr( Block )+' from blockchain';
+          TLog.NewLog(lterror,ClassName,aux);
+          Raise Exception.Create(aux);
+        end;
+      end;
+      TLog.NewLog(ltinfo,ClassName,Format('Updated Bank with Vault values. Current block:%d ',[Block]));
+    finally
+      FBankLock.Release;
+    end;
+  finally
+    for i := 0 to FNotifyList.Count - 1 do begin
+      TABEYBankNotify(FNotifyList.Items[i]).NotifyNewBlock;
+    end;
+  end;
+end;
 
 function TABEYBank.GetActualTargetSecondsAverage(BackBlocks: Cardinal): Real;
 Var ts1, ts2: Int64;
@@ -1704,6 +1682,70 @@ begin
   if FStorageClass=Value then exit;
   FStorageClass := Value;
   if Assigned(FStorage) then FreeAndNil(FStorage);
+end;
+
+function TABEYBank.RollbackBlockchainToBlock(BlockNumber:Cardinal):Boolean;
+var restoreProgressNotify:TProgressNotify;
+begin
+    Result := False;
+
+    restoreProgressNotify := Nil;
+
+    DebugLn('++++++++++++++++BlocksCount',IntTOStr(FVault.BlocksCount));
+
+
+    {Perform a Rollback to the block before the block where TOPData was included in order to eliminate TOPData from blockchain}
+    DebugLn('++++++++++++++++++++++++++++++++++++FirstExec');
+    TLog.NewLog(ltInfo,ClassName,'Rolling Vault back to block  ' + IntToStr(FVault.BlocksCount - 2));
+    FVault.RollBackToSnapshot( FVault.BlocksCount - 2);
+    DebugLn('++++++++++++++++BlocksCount',IntTOStr(FVault.BlocksCount));
+    UpdateVaultAfterRollback(FVault.BlocksCount - 1);
+    DebugLn('++++++++++++++++BlocksCount',IntTOStr(FVault.BlocksCount));
+
+
+    {when a Rollback through snapshots is performed,undone operations are put into pending,so we need to delete blocks rolled back too}
+    DebugLn('++++++++++++++++++++++++++++++++++++SecondExec');
+    TLog.NewLog(ltInfo,ClassName,'Deleting blocks starting with BlockNumber  ' + IntToStr(FVault.BlocksCount - 1));
+    FStorage.DoDeleteBlockChainBlocks( FVault.BlocksCount - 1); //delete last block; the one containing TOPData
+    DebugLn('++++++++++++++++BlocksCount',IntTOStr(FVault.BlocksCount));
+    UpdateVaultAfterRollback(FVault.BlocksCount - 2);
+    DebugLn('++++++++++++++++BlocksCount',IntTOStr(FVault.BlocksCount));
+
+
+    DebugLn('++++++++++++++++++++++++++++++++++++ThirdExec');
+    {FVault.PreviousVaultOriginBlock := LongInt(FVault.BlocksCount - 2 ) ; // in UpdateValuesFromVault this is variable used to know how many blocks to update
+    UpdateValuesFromVault;    }
+    DebugLn('++++++++++++++++++++++++++++++++++++FourthExec');
+
+    TLog.NewLog(ltInfo,ClassName,'Restoring bank with BlockNumber ' + IntToStr(BlockNumber+1) );
+    DebugLn('++++++++++++++++BlocksCount',IntTOStr(FVault.BlocksCount));
+    FStorage.RestoreBank(BlockNumber + 1 ,restoreProgressNotify);   // appropiate vault is selected; ex: BlockNumber: 370 then landmark8.vault is selected etc.
+    DebugLn('++++++++++++++++BlocksCount',IntTOStr(FVault.BlocksCount));
+    TLog.NewLog(ltInfo,ClassName,'Updating vault values');
+    DebugLn('++++++++++++++++BlocksCount',IntTOStr(FVault.BlocksCount));
+    //UpdateVaultAfterRollback(BlockNumber-1);
+
+    DebugLn('++++++++++++++++BlocksCount',IntTOStr(FVault.BlocksCount));
+
+    DebugLn('++++++++++++++++++++++++++++++++++++FifthExec');
+    DebugLn('++++++++++++++++BlocksCount',IntTOStr(FVault.BlocksCount));
+    TLog.NewLog(ltInfo,ClassName,'Deleting blockchain blocks starting with BlockNUmber ' + IntToStr(BlockNumber + 1)  );
+    DebugLn('++++++++++++++++BlocksCount',IntTOStr(FVault.BlocksCount));
+    FStorage.DoDeleteBlockChainBlocks( BlockNumber + 1);         //delete blocks starting with BlockNUmber + 2 -> if BlockNumber is 350, then delete all starting from 352(including) bc blockcs are 0 indexed(BlockNumber has index BlockNumber+1,next is +2)
+    TLog.NewLog(ltInfo,ClassName,'Updating vault values');
+    DebugLn('++++++++++++++++BlocksCount',IntTOStr(FVault.BlocksCount));
+    //UpdateVaultAfterRollback(BlockNumber);
+    DebugLn('++++++++++++++++BlocksCount',IntTOStr(FVault.BlocksCount));
+
+    Result := True;
+
+end;
+
+function TABEYBank.VerifyBootnodesPubkey(PubKey:TAccountKey):Boolean;
+begin
+     DebugLn('AccKey:' + TCrypto.ToHexaString( TAccountComp.AccountKey2RawString(PubKey) ) ) ;
+     if TCrypto.ToHexaString( TAccountComp.AccountKey2RawString(PubKey) ) = 'CA02200009AFAEE1ECC7F7E6901679E224D92FE4229F0BB15C1E7B9FACF03B218F93045E200088EE11A78A9AEDA31BB8563BA8B27465350E3B4AC0A75C9F1DAAAEB35822298C' then Result := True
+     else Result := False;
 end;
 
 { TABEYOperationsComp }
